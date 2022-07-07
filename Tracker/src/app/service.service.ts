@@ -12,7 +12,7 @@ import { cohort } from './models/cohort';
   providedIn: 'root'
 })
 export class ServiceService {
-API_URL=environment.API_URL
+  API_URL = environment.apiUrl
 
   constructor(private http:HttpClient) { }
 
