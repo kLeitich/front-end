@@ -1,34 +1,33 @@
 
-<body>
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-lg-3 col-sm-0"></div>
             <div class=" col-lg-6 col-md-6 col-sm-12">
                 <div class="login-details">
                    
-                    <form action="">
+                    <form (submit)="submit(
+                      name.value, password.value
+                    )">
         
                       <!-- <h3 class="text-center h-font-semibold">PROJECT TRACKER</h3> -->
                       <h4 class="text-center h-font-semibold">LOGIN</h4>
                       <div class="form-outline mb-4">
                         <label class="form-label" for="username1">Username</label>
-                        <input type="text" name="username" id="username1" class="form-control form-control-lg" />                  
+                        <input type="text"#name name="username" id="username1" class="form-control form-control-lg" />                  
                       </div>
     
                       <div class="form-outline mb-4">
                         <label class="form-label" for="password1">Password</label>
-                        <input type="password" name="password" id="password1" class="form-control form-control-lg" />
+                        <input #password type="password" name="password" id="password1" class="form-control form-control-lg" />
          
                       </div>
                                                
                       <div class="pt-1 text-center">
-                        <button  type="submit" class="btn btn-orange " type="button">Login</button>
+                        <button  type="submit" class="btn btn-orange">Login</button>
                       </div>
     
-                      <div class="social">
-                        <div class="go"><i class="fab fa-google"></i>  Google</div>
-                        <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-                      </div>
+                      <p class="mb-5 pb-lg-2 text-center" style="color: #393f81;"><a routerLink="/register"
+                        style="color: #111F3C;">Register</a></p>
                       <p class="mb-5 pb-lg-2 text-center" style="color: #393f81;"><a href="/register/"
                           style="color: #111F3C;">Login with Google</a></p>
                       <a href="#!" class="small text-muted">Terms of use.</a>
@@ -42,4 +41,3 @@
     
 
 
-</body>

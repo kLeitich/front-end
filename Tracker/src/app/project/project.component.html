@@ -17,13 +17,32 @@
          <h5>Recently Added Projects</h5><hr>
         </div>
         <div id="aboutus">
-            <ul *ngFor="let project of project">
-                <img src="{{image_url+project.project_image}}" />      
-                
-                <li>{{project.name}}</li>
-                <li>{{project.description}}</li>
-                <li>{{project.url}}</li>
-            </ul>
+            <div class="card">
+                <ul *ngFor="let project of project">
+                    <img src="{{image_url+project.project_image}}" />      
+                    <!-- <li>{{project.user}}</li> -->
+                    <li>{{project.name}}</li>
+                    <li>{{project.description}}</li>
+                    <li>{{project.url}}</li>
+                    
+                </ul>
+            </div>
+            
+            
         </div>
+        <!-- <div class="row" *ngFor="let project of project">
+              <div class="col-md-4" >
+                <div class="card"  style="margin-bottom: 1vw;">
+                    <img src="{{image_url+project.project_image}}" />
+                  <div class="card-body">
+                    <li>{{project.name}}</li>
+                    <li>{{project.description}}</li>
+                    <li>{{project.url}}</li>
+                   
+                  </div>
+                </div>
+              </div>
+            
+            </div> -->
     </div>
 </body>
