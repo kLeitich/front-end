@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectComponent } from './project/project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 
@@ -28,6 +29,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

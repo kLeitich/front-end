@@ -72,6 +72,14 @@ Manage Projects
 </p>
 </a>
 </li>
+<li class="nav-item">
+    <a href="http://localhost:4200/admin-dashboard" class="nav-link text-white">
+    <i class="nav-icon fas fa-table"></i>
+    <p>
+    Manage Cohorts
+    </p>
+    </a>
+    </li>
 </ul>
 </nav>
 
@@ -210,7 +218,7 @@ Manage Projects
 <div class="card-header">
 <h3 class="card-title">Latest Members</h3>
 <div class="card-tools">
-<span class="badge badge-danger">8 New Members</span>
+<span class="badge badge-danger">3 New Members</span>
 <button type="button" class="btn btn-tool" data-card-widget="collapse">
 <i class="fas fa-minus"></i>
 </button>
@@ -237,31 +245,6 @@ Manage Projects
 <a class="users-list-name" href="#">Jane</a>
 <span class="users-list-date">12 Jan</span>
 </li>
-<li>
-<img src="assets/images/person.jpg" alt="User Image">
-<a class="users-list-name" href="#">John</a>
-<span class="users-list-date">12 Jan</span>
-</li>
-<li>
-<img src="assets/images/person.jpg" alt="User Image">
-<a class="users-list-name" href="#">Alexander</a>
-<span class="users-list-date">13 Jan</span>
-</li>
-<li>
-<img src="assets/images/person.jpg" alt="User Image">
-<a class="users-list-name" href="#">Sarah</a>
-<span class="users-list-date">14 Jan</span>
-</li>
-<li>
-<img src="assets/images/person.jpg" alt="User Image">
- <a class="users-list-name" href="#">Nora</a>
-<span class="users-list-date">15 Jan</span>
-</li>
-<li>
-<img src="assets/images/person.jpg" alt="User Image">
-<a class="users-list-name" href="#">Nadia</a>
-<span class="users-list-date">15 Jan</span>
-</li>
 </ul>
 
 </div>
@@ -275,10 +258,12 @@ Manage Projects
 </div>
 
 </div>
-
+<div class="card-footer clearfix">
+    <a href="#" class="btn btn-sm float-left" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Student</a>
+    </div>
 <div class="card">
     <div class="card-header border-transparent">
-    <h3 class="card-title">Projects</h3>
+    <h3 class="card-title">Students</h3>
     <div class="card-tools">
     <button type="button" class="btn btn-tool" data-card-widget="collapse">
     <i class="fas fa-minus"></i>
@@ -297,10 +282,10 @@ Manage Projects
     <th><i class="fa-thin fa-square-check"></i></th>
     <th>Id</th>
     <th>Student Name</th>
-    <th>Project</th>
-    <th>Repository</th>
+    <th>Email</th>
+    <th>Status</th>
     <th>Date Added</th>
-    <th>Action</th>
+    <th>Actions</th>
     </tr>
     </thead>    
     <tbody>
@@ -311,7 +296,16 @@ Manage Projects
     <td>BurgerFest</td>
     <th><a href="#">link</a></th>
     <th>22-06-02</th>
-    <th></th>
+    <th>
+        <div class="row">
+            <div class="col">
+                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+            </div>
+            <div class="col">
+               <a href="#"> <i class="fa-solid fa-trash-can" style="color: red;"></i></a>
+            </div>
+        </div>
+    </th>
     </tr>
     <tr>
         <td><i class="fa-thin fa-square-check"></i> </td>
@@ -320,7 +314,16 @@ Manage Projects
         <td>BurgerFest</td>
         <th><a href="#">link</a></th>
         <th>22-06-02</th>
-        <th></th>
+        <th>
+            <div class="row">
+                <div class="col">
+                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </div>
+                <div class="col">
+                    <a href="#"><i class="fa-solid fa-trash-can" style="color: red;" ></i></a>
+                </div>
+            </div>
+        </th>
     </tr>
     <tr>
         <td><i class="fa-thin fa-square-check"></i> </td>
@@ -329,7 +332,16 @@ Manage Projects
         <td>BurgerFest</td>
         <th><a href="#">link</a></th>
         <th>22-06-02</th>
-        <th></th>
+        <th>
+            <div class="row">
+                <div class="col">
+                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                </div>
+                <div class="col">
+                    <a href="#"><i class="fa-solid fa-trash-can" style="color: red;" ></i></a>
+                </div>
+            </div>
+        </th>
     </tr>
     
     
@@ -339,14 +351,12 @@ Manage Projects
     
     </div>
     
+    </div>
     <div class="card-footer clearfix">
-    <a href="" class="btn btn-sm btn-info float-left">Add student</a>
-    <a href="" class="btn btn-sm btn-secondary float-right">View All students</a>
-    </div>
-    
-    </div>
-
+        <a href="#" class="btn btn-sm float-left" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Project</a>
+        </div>
 <div class="card">
+
 <div class="card-header border-transparent">
 <h3 class="card-title">Projects</h3>
 <div class="card-tools">
@@ -381,7 +391,16 @@ Manage Projects
 <td>BurgerFest</td>
 <th><a href="#">link</a></th>
 <th>22-06-02</th>
-<th></th>
+<th>
+    <div class="row">
+        <div class="col">
+           <a href="#"> <i class="fa-solid fa-pen-to-square"></i></a>
+        </div>
+        <div class="col">
+            <a href="#"><i class="fa-solid fa-trash-can" style="color: red;" ></i></a>
+        </div>
+    </div>
+</th>
 </tr>
 
 
@@ -391,16 +410,75 @@ Manage Projects
 
 </div>
 
+
+
+</div>
 <div class="card-footer clearfix">
-<a href="" class="btn btn-sm btn-info float-left">Add new Project</a>
-<a href="" class="btn btn-sm btn-secondary float-right">View All Projects</a>
+    <a href="#" class="btn btn-sm float-left" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Cohort</a>
+    </div>
+<div class="card">
+
+<div class="card-header border-transparent">
+<h3 class="card-title">Cohorts</h3>
+<div class="card-tools">
+<button type="button" class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i>
+</button>
+<button type="button" class="btn btn-tool" data-card-widget="remove">
+<i class="fas fa-times"></i>
+</button>
 </div>
+</div>
+
+<div class="card-body p-0">
+<div class="table-responsive">
+<table class="table m-0">
+<thead>
+<tr>
+<th><i class="fa-thin fa-square-check"></i></th>
+<th>Id</th>
+<th>Cohort Name</th>
+<th>Cohort Lead</th>
+<th>No. Students</th>
+<th>Date Added</th>
+<th>Action</th>
+</tr>
+</thead>    
+<tbody>
+<tr>
+<td><i class="fa-thin fa-square-check"></i> </td>
+<td><a href="#">1</a></td>
+<td>Naomy Msupu</td>
+<td>BurgerFest</td>
+<th><a href="#">link</a></th>
+<th>22-06-02</th>
+<th>
+<div class="row">
+    <div class="col">
+       <a href="#"> <i class="fa-solid fa-pen-to-square"></i></a>
+    </div>
+    <div class="col">
+        <a href="#"><i class="fa-solid fa-trash-can" style="color: red;" ></i></a>
+    </div>
+</div>
+</th>
+</tr>
+
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+
 
 </div>
 
 </div>
 
 </div>
+
 
 </div>
 </section>
