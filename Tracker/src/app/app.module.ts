@@ -10,9 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectComponent } from './project/project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 import { ProjectFormComponent } from './project-form/project-form.component';
-import { DirectiveDirective } from './directive.directive';
+
 
 
 @NgModule({
@@ -24,9 +25,10 @@ import { DirectiveDirective } from './directive.directive';
     NavbarComponent,
     UserProfileComponent,
     UpdateProfileComponent,
-    ProjectComponent,
     ProjectFormComponent,
-    DirectiveDirective,
+    ProjectComponent,
+    AdminDashboardComponent
+  
   
 
   ],

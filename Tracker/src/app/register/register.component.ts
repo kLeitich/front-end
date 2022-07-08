@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
       email: email,
       password: password
     }
-  // alert(typeof(name))
+
     this.http.post<object>('http://localhost:8000/api/register/',
     {
       name: name,
@@ -41,5 +41,6 @@ export class RegisterComponent implements OnInit {
         // this.router.navigate(['/login'])
       });
   
+    
   }
 }
