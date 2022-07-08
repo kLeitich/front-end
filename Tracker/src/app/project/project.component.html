@@ -7,6 +7,8 @@
         <a href="">Home</a>
         <a href="https://moringaschool.com/about-us/">About us</a>
         <a href="">Projects</a>
+        <a href="">Add Project</a>
+        
         <a id="log" routerLink="/login">Login</a>
 
     </div>
@@ -14,35 +16,36 @@
 <body>
     <div class="container">
         <div class="project">
+         <h5>Featured Project</h5><hr>
+        </div>
+     <div class="cards">
+        <div *ngFor="let project of project" class="card">
+            <img src="{{image_url+project.project_image}}" />
+            {{project.username}}
+            <h6><strong>Project Name:</strong>{{project.name}}</h6>
+            <p><strong>Description:</strong>{{project.description}}</p>
+            <p><strong>Date_posted:</strong>{{project.date_posted}}</p>
+            <!-- <a class="btn btn-sm btn-light" href="">View</a> -->
+        </div>
+       
+        </div>
+    </div>
+    <div class="container">
+        <div class="project">
          <h5>Recently Added Projects</h5><hr>
         </div>
-        <div id="aboutus">
-            <div class="card">
-                <ul *ngFor="let project of project">
-                    <img src="{{image_url+project.project_image}}" />      
-                    <!-- <li>{{project.user}}</li> -->
-                    <li>{{project.name}}</li>
-                    <li>{{project.description}}</li>
-                    <li>{{project.url}}</li>
-                    
-                </ul>
-            </div>
-            
-            
+     <div class="cards">
+        <div *ngFor="let project of project" class="card">
+            <img src="{{image_url+project.project_image}}" />
+            <h6><strong>Project Name:</strong>{{project.name}}</h6>
+            <p><strong>Description:</strong>{{project.description}}</p>
+            <p><strong>Date_posted:</strong>{{project.date_posted}}</p>
+            <a class="btn btn-sm btn-light" href="">View</a>
         </div>
-        <!-- <div class="row" *ngFor="let project of project">
-              <div class="col-md-4" >
-                <div class="card"  style="margin-bottom: 1vw;">
-                    <img src="{{image_url+project.project_image}}" />
-                  <div class="card-body">
-                    <li>{{project.name}}</li>
-                    <li>{{project.description}}</li>
-                    <li>{{project.url}}</li>
-                   
-                  </div>
-                </div>
-              </div>
-            
-            </div> -->
+       
+        </div>
     </div>
+   
 </body>
+ 
+
