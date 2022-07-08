@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -23,7 +23,8 @@ export class LoginComponent implements OnInit {
         { withCredentials: true }
       )
       .subscribe((res)=>{
-        console.log(res)
+        // console.log(res)
+        this.router.navigate(['/my-profile']);
       })
 
   }

@@ -67,6 +67,16 @@ hr{
   margin-bottom: 1vw;
   
 }
+#one hr{
+  height: 0.2vw;
+  width: 10vw;
+  color: #111f3c;
+  background-color: #111f3c;
+  margin-top: -0.5vw;
+  margin-right: 51vw;
+  margin-bottom: 1vw;
+  
+}
 /* ................. */
 #aboutus img{
   width: 25vw;
@@ -82,12 +92,13 @@ hr{
 }
 .card{
   background-color: white;
-  width: 30%;
+  width: 32%;
   margin-left: 1vw;
   margin-top: 2vw;
   margin-bottom: 2vw;
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
   border-radius: 2vw;
+  height: 35vw;
 }
 .cards{
   display: flex;

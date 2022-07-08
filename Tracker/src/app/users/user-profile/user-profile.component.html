@@ -14,8 +14,17 @@
 <body>
 <div class="container">
     <!--user profile here-->
-   <div class="userdetails">
-        <div class="row">
+   <div class="userdetails" >
+    <div *ngFor="let profile of profile" class="card">
+      
+        {{profile.first_name}}
+        <h6><strong></strong>{{profile.last_name}}</h6>
+        <!-- <img src="{{image_url+profile.profile_image}}" /> -->
+        <!-- <p><strong>Description:</strong>{{project.description}}</p>
+        <p><strong>Date_posted:</strong>{{project.date_posted}}</p> -->
+        <!-- <a class="btn btn-sm btn-light" href="">View</a> -->
+    </div>
+        <!-- <div class="row">
             <div class="col-lg-5 col-md-5 col-sm-12">
                 <div class="text-center mt-3" >
                 <img  class="rounded-circle profile-img" src="assets/images/naomi (1).jpg" alt="profile-image" width="60%">
@@ -30,7 +39,7 @@
                 <a href="" routerLink="/update-profile" ><button class="btn  btn-orange">Update Profile</button></a>
             </div>
             <div class="col-lg-1 col-md-1 col-sm-0"></div>
-        </div>
+        </div> -->
    </div>
         <!-- User projects here-->
         <div class="userprojects mt-3">

@@ -10,8 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectComponent } from './project/project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DatePipe } from './date.pipe';
-import { ProjectFormComponent } from './project/project-form/project-form.component';
+
+import { ProjectFormComponent } from './project-form/project-form.component';
 import { DirectiveDirective } from './directive.directive';
 
 
@@ -25,7 +25,6 @@ import { DirectiveDirective } from './directive.directive';
     UserProfileComponent,
     UpdateProfileComponent,
     ProjectComponent,
-    DatePipe,
     ProjectFormComponent,
     DirectiveDirective,
   
