@@ -21,8 +21,8 @@ export class RegisterComponent implements OnInit {
       password: ''
     });
   }  submit(name:string, email:string, password:string): void {
-    // this.http.post('http://localhost:8000/api/register', this.form.getRawValue())
-    //   .subscribe(() => this.router.navigate(['/login']));
-    alert(name)
+    this.http.post('http://localhost:8000/api/register', this.form.getRawValue())
+      .subscribe(() => this.router.navigate(['/login']));
+    // alert(name)
   }
 }
