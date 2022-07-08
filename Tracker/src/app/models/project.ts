@@ -1,6 +1,6 @@
 export interface project{
     'id':number
-    'user':string
+    'username':string
     'name':string
     'description':string
     'project_image':any
