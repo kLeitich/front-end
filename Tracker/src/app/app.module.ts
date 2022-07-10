@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectComponent } from './project/project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 import { ProjectFormComponent } from './project-form/project-form.component';
@@ -33,6 +34,7 @@ import { ProjectFormComponent } from './project-form/project-form.component';
 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
