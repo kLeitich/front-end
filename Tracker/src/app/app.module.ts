@@ -12,9 +12,9 @@ import { ProjectComponent } from './project/project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { DatePipe } from './date.pipe';
-import { ProjectFormComponent } from './project/project-form/project-form.component';
-import { DirectiveDirective } from './directive.directive';
+
+import { ProjectFormComponent } from './project-form/project-form.component';
+
 
 
 @NgModule({
@@ -26,14 +26,10 @@ import { DirectiveDirective } from './directive.directive';
     NavbarComponent,
     UserProfileComponent,
     UpdateProfileComponent,
-    ProjectComponent,
-
-    AdminDashboardComponent,
-
-    DatePipe,
     ProjectFormComponent,
-    DirectiveDirective,
-
+    ProjectComponent,
+    AdminDashboardComponent
+  
   
 
   ],
