@@ -21,14 +21,9 @@ export class RegisterComponent implements OnInit {
   } 
   
   submit(name:string,username:string, email:string, password:string): void {
-    let payload={
-      name: name,
-      username: username,
-      email: email,
-      password: password
-    }
-
-    this.http.post<object>('http://localhost:8000/api/register/',
+ 
+    this.http
+    .post('http://localhost:8000/api/register/',
     {
       name: name,
       username: username,
@@ -36,9 +31,9 @@ export class RegisterComponent implements OnInit {
       password: password
     }
     )
-      .subscribe((res) => {
+    .subscribe((res) => {
         console.log(res)
-        // this.router.navigate(['/login'])
+        this.router.navigate(['/login'])
       });
   
     

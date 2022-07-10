@@ -1,72 +1,23 @@
-/*
-/* Created by Filipe Pina
- * Specific styles of signin, register, component
- */
-/*
- * General styles
- */
-
- body, html{
-    height: 100%;
-    background-repeat: no-repeat;
-    background-color: #d3d3d3;
-    font-family: 'Oxygen', sans-serif;
+.container{
+   margin-top: 3vw;
 }
-
-.main{
-    margin-top: 70px;
+input{
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom:0.15vw solid;
+   border-color: #fa521c;
+   border-radius: 0;
 }
-
-h1.title { 
-   font-size: 50px;
-   font-family: 'Passion One', cursive; 
-   font-weight: 400; 
+.container h4{
+   margin-bottom: 1vw;
+   font-weight: 700;
 }
-
-hr{
-   width: 10%;
-   color: #fff;
-}
-
-.form-group{
-   margin-bottom: 15px;
-}
-
-label{
-   margin-bottom: 15px;
-}
-
-input,
-input::-webkit-input-placeholder {
-   font-size: 11px;
-   padding-top: 3px;
-}
-
-.main-login{
-    background-color: #fff;
-   /* shadows and rounded borders */
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
-   border-radius: 2px;
-   -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-
-}
-
-.main-center{
-    margin-top: 30px;
-    margin: 0 auto;
-    max-width: 330px;
-   padding: 40px 40px;
-
-}
-
-.login-button{
-   margin-top: 5px;
-}
-
-.login-register{
-   font-size: 11px;
-   text-align: center;
+section{
+   background-image: url(../../assets/images/white1.png), url(../../assets/images/white.png);
+   background-position: top left , bottom right ;
+   background-repeat: no-repeat, no-repeat;
+   padding-top: 5vw;
+   padding-bottom: 11vw;
+   margin-left: -1.5vw;
 }
