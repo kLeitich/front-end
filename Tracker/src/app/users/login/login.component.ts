@@ -12,13 +12,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submit(userName: string, userPassword: string): void {
+  submit(email: string, password: string): void {
     this.http
       .post(
-        'https://backendjw.herokuapp.com/api/login/',
+        'http://127.0.0.1:8000/api/login/',
         {
-          username: userName,
-          password: userPassword,
+          email: email,
+          password: password,
         },
         { withCredentials: true }
       )
