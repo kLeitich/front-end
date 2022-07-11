@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ProjectFormComponent } from './project-form/project-form.component';
 import { DirectiveDirective } from './directive.directive';
+import { DatePipe } from './date.pipe';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { DirectiveDirective } from './directive.directive';
     ProjectComponent,
     ProjectFormComponent,
     DirectiveDirective,
+    DatePipe
   
 
   ],

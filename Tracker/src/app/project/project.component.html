@@ -21,13 +21,12 @@
      <div class="cards">
         <div *ngFor="let project of project" class="card">
             <img src="{{image_url+project.project_image}}" />
-            {{project.user}}
             <h6><strong>Project Name:</strong>{{project.name}}</h6>
             <p><strong>Description:</strong>{{project.description}}</p>
+            <p><strong>Created_by:</strong>{{project.user}}</p> 
             <p><strong>Date_posted:</strong>{{project.date_posted}}</p>
-            <!-- <a class="btn btn-sm btn-light" href="">View</a> -->
+            <a class="btn btn-sm btn-light" href="{{project.url}}">View</a>
         </div>
-       
         </div>
     </div>
     <div class="container">
