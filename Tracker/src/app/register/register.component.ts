@@ -6,6 +6,7 @@ import {User} from '../models/user.model';
 
 
 import {Router} from '@angular/router';
+import { FormGroup } from '@angular/forms';
 
 
 @Component({
