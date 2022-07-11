@@ -14,7 +14,8 @@ import { CommonModule } from '@angular/common';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 import { ProjectFormComponent } from './project-form/project-form.component';
-
+import { DirectiveDirective } from './directive.directive';
+import { DatePipe } from './date.pipe';
 
 
 @NgModule({
@@ -27,9 +28,9 @@ import { ProjectFormComponent } from './project-form/project-form.component';
     UserProfileComponent,
     UpdateProfileComponent,
     ProjectFormComponent,
-    ProjectComponent,
-    AdminDashboardComponent
-  
+    DirectiveDirective,
+    AdminDashboardComponent ,
+    DatePipe
   
 
   ],
