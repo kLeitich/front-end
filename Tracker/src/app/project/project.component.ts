@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceService} from 'src/app/service.service'
 import {project} from '../models/project'
-import {member} from '../models/profile'
+
 
 @Component({
   selector: 'app-project',
@@ -23,9 +23,9 @@ export class ProjectComponent implements OnInit {
     this.ServiceService.Project().subscribe(project=>{
       this.project=project
       for(let item of this.project){
-        console.log(this.image_url)
+        // console.log(this.image_url)
       }
-      // console.log(project)
+      console.log(project)
     })
   }
 }

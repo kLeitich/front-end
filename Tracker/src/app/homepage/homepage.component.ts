@@ -21,7 +21,7 @@ export class HomepageComponent implements OnInit {
     this.ServiceService.Project().subscribe(project=>{
       this.project=project
       for(let item of this.project){
-        console.log(this.image_url)
+        // console.log(this.image_url)
       }
       // console.log(project)
     })
