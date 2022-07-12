@@ -48,21 +48,10 @@ export class LoginComponent implements OnInit {
       // });
       .subscribe((response: object) => {
         if (Object.keys(response).includes('jwt')) {
-          this.authentication.getUser().subscribe((response: User) => {
-              if (response.id) {
-                this.user = response;
-                if (/@([a-z\S]+)/.exec(String(this.user.email))) {
-                  if (
-                    /@([a-z\S]+)/.exec(String(this.user.email))![1] ==
-                    'student.moringaschool.com'
-                  ) {
-                    this.router.navigate(['/my-profile']);
-                  } else {
-                    this.router.navigate(['/admin-dashboard']);
-                  }
-                }
-              }
-            });
+          console.log(response);
+          this.router.navigate(['/']);
+        } else {
+          console.log(response);
         }
       });
 
