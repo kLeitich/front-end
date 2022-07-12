@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+
+import { Emitters } from 'src/app/emitters/emitters';
+
 import { User } from '../../models/user';
 import { AuthenticatedUserService } from 'src/app/authenticated-user.service';
+
 
 @Component({
   selector: 'app-login',
