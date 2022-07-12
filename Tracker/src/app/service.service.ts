@@ -5,6 +5,7 @@ import {HttpClient} from '@angular/common/http'
 import { profile } from './models/profile';
 import { project} from './models/project';
 import { cohort } from './models/cohort';
+import { user } from '../app/models/user.model'
 
 
 
@@ -24,5 +25,8 @@ export class ServiceService {
 }
   Cohort():Observable<cohort[]>{
     return this.http.get<cohort[]>(`${this.API_URL}/cohort`)
+  }
+  User():Observable<user[]>{
+    return this.http.get<user[]>(`${this.API_URL}/users/`)
   }
 }
