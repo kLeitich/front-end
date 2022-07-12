@@ -32,10 +32,6 @@ export class RegisterComponent implements OnInit {
     }
     )
     .subscribe((res) => {
-        // console.log(res)
-        this.response=res;
-        this.message=this.response.message
-       
         this.router.navigate(['/login']);
       });
   

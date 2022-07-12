@@ -14,37 +14,53 @@
     </div>
 </div>
 <body>
-    <div class="container">
-        <div class="project" id="one">
-         <h5>Featured Project</h5><hr>
+    
+    <div id="aboutus">
+        <div class="story"*ngFor="let project of project">
+            <div class="img">
+                <img src="{{image_url+project.project_image}}" />
+            </div>
+            <div class="description">
+                <span>{{project.name}}</span>
+                <p>{{project.description}}</p>
+                <p>{{project.user}}</p>
+                <a class="btn btn-sm btn-dark" href="{{project.url}}">View</a>
+                <!-- <div class="collab">
+                    <h6>collaborators</h6>
+                    <div class="imcolab">
+                       <a href=""></a> {{profile.user.profile_image}}
+                    </div>
+                </div> -->
+            </div>
+           
+        </div>
+        <!-- <div class="member"*ngFor="let member of member">
+            <p>{{image_url+profile.image}}</p>
+            <p>{{profile.name}}</p>
+        </div> -->
     </div>
-    {{display.name}}
-     <div class="cards">
-        <div *ngFor="let project of project" class="card">
-            <img src="{{image_url+project.project_image}}" />
-            <h6><strong>Project Name:</strong>{{project.name}}</h6>
-            <p><strong>Description:</strong>{{project.description}}</p>
-            <p><strong>Created_by:</strong>{{project.user}}</p> 
-            <p><strong>Date_posted:</strong>{{project.date_posted}}</p>
-            <a class="btn btn-sm btn-light" href="{{project.url}}">View</a>
-        </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="project">
-         <h5>Recently Added Projects</h5><hr>
-        </div>
-     <div class="cards">
-        <div *ngFor="let project of project" class="card">
-            <img src="{{image_url+project.project_image}}" />
-            <h6><strong>Project Name:</strong>{{project.name}}</h6>
-            <p><strong>Description:</strong>{{project.description}}</p>
-            <p><strong>Date_posted:</strong>{{project.date_posted}}</p>
-            <a class="btn btn-sm btn-light" href="">View</a>
-        </div>
+    <div class="card1">
+        <!-- <div class="project">
+            <h5>Recently Added Projects</h5><hr>
+           </div> -->
        
-        </div>
+           <div *ngFor="let project of project" >
+               <div class="card-image">
+                   <img src="{{image_url+project.project_image}}" />
+               </div>
+               <div class="card-info">
+                   <a class="btn btn-sm btn-light" href="">{{project.name}}</a> 
+               </div>
+               <!-- <h6><strong>Project Name:</strong>{{project.name}}</h6>
+               <p><strong>Description:</strong>{{project.description}}</p>
+               <p><strong>Date_posted:</strong>{{project.date_posted}}</p>
+               <a class="btn btn-sm btn-light" href="">View</a> -->
+           </div>
     </div>
+        
+       
+     
+ 
    
 </body>
  
