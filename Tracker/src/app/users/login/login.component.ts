@@ -6,6 +6,7 @@ import { Emitters } from 'src/app/emitters/emitters';
 
 import { User } from '../../models/user';
 import { AuthenticatedUserService } from 'src/app/authenticated-user.service';
+import { Token } from '@angular/compiler';
 
 
 @Component({
@@ -36,10 +37,27 @@ export class LoginComponent implements OnInit {
         { withCredentials: true }
       )
 
-      .subscribe((response: object) => {
+      .subscribe((response: any) => {
         if (Object.keys(response).includes('jwt')) {
           console.log(response);
-          this.router.navigate(['/']);
+          localStorage.setItem('Token',response.jwt)
+          this.authentication.getUser().subscribe((response: User) => {
+            console.log(response)
+            if (response.username) {
+            
+              this.user = response;
+              if (/@([a-z\S]+)/.exec(String(this.user.email))) {
+                if (
+                  /@([a-z\S]+)/.exec(String(this.user.email))![1] ==
+                  'student.moringaschool.com'
+                ) {
+                  this.router.navigate(['/my-profile']);
+                } else {
+                  this.router.navigate(['/admin-dashboard']);
+                }
+              }
+            }
+          });
         } else {
           console.log(response);
         }

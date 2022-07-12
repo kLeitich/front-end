@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { User } from 'src/app/models/user';
 
 @Injectable({
@@ -8,11 +9,15 @@ import { User } from 'src/app/models/user';
 export class AuthenticatedUserService {
   constructor(private http: HttpClient) {}
   ngOnInit() {}
+  user:any
+  is_loggedIn=new BehaviorSubject(false)
+
   getUser() {
+    const Token=localStorage.getItem('Token')
     return this.http.get<User>(
       'http://localhost:8000/api/authenticated_user/',
 
-      { withCredentials: true }
+      { withCredentials: true,headers:{Authorization:'Bearer '+ Token } }
     );
   }
 

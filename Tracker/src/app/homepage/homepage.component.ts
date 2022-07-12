@@ -26,21 +26,7 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
       this.Project()
 
-      this.authentication.getUser().subscribe((response: User) => {
-        if (response.id) {
-          this.user = response;
-          if (/@([a-z\S]+)/.exec(String(this.user.email))) {
-            if (
-              /@([a-z\S]+)/.exec(String(this.user.email))![1] ==
-              'student.moringaschool.com'
-            ) {
-              this.router.navigate(['/my-profile']);
-            } else {
-              this.router.navigate(['/admin-dashboard']);
-            }
-          }
-        }
-      });
+     
      
   }
   

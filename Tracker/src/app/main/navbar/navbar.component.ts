@@ -10,27 +10,27 @@ import { AuthenticatedUserService } from 'src/app/authenticated-user.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
   authenticated!:boolean 
   value=true
 
-  constructor() { }
-
-  ngOnInit(): void {
-    Emitters.authEmitter.subscribe(
-      (auth:boolean)=>{
-          this.authenticated=auth;
+  user!: any;
+  is_loggedIn=false
+  constructor(private authentication: AuthenticatedUserService) {
+    authentication.is_loggedIn.subscribe(
+      is_loggedIn=>{
+        this.is_loggedIn=is_loggedIn
       }
     )
-
-  user!: any;
-  constructor(private authentication: AuthenticatedUserService) {}
+  }
 
   ngOnInit(): void {
+
+
     this.authentication.getUser().subscribe((response) => {
-      if (response.id) {
+      console.log(response)
+      // if (response.id) {
         this.user = response;
-      }
+      // }
     });
 
   }
