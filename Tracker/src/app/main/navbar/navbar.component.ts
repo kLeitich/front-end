@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Emitters } from 'src/app/emitters/emitters';
+
+import { AuthenticatedUserService } from 'src/app/authenticated-user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +10,7 @@ import { Emitters } from 'src/app/emitters/emitters';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
   authenticated!:boolean 
   value=true
 
@@ -18,6 +22,24 @@ export class NavbarComponent implements OnInit {
           this.authenticated=auth;
       }
     )
+
+  user!: any;
+  constructor(private authentication: AuthenticatedUserService) {}
+
+  ngOnInit(): void {
+    this.authentication.getUser().subscribe((response) => {
+      if (response.id) {
+        this.user = response;
+      }
+    });
+
   }
 
+  logOut() {
+    this.authentication.logOut().subscribe((response) => {
+      console.log(response)
+      this.user = null;
+    });
+  }
 }
+

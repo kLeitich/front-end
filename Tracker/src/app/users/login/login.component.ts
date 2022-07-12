@@ -36,15 +36,14 @@ export class LoginComponent implements OnInit {
         { withCredentials: true }
       )
 
-    
-      .subscribe((res:any)=>{
-        console.log(res.jwt)
-
-        this.router.navigate(['/my-profile']);
-
-        Emitters.authEmitter.emit(true);
-      })
-
+      .subscribe((response: object) => {
+        if (Object.keys(response).includes('jwt')) {
+          console.log(response);
+          this.router.navigate(['/']);
+        } else {
+          console.log(response);
+        }
+      });
 
   }
 }
