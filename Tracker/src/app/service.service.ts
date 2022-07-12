@@ -13,7 +13,7 @@ import { user } from '../app/models/user.model'
   providedIn: 'root'
 })
 export class ServiceService {
-  API_URL = environment.apiUrl
+  API_URL = environment.API_URL
 
   constructor(private http:HttpClient) { }
 

@@ -13,3 +13,11 @@ export interface profile{
 
 
 }
+
+
+export interface member{
+    'id':number
+    'user':string
+    'name':string
+
+}
