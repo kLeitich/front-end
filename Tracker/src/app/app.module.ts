@@ -16,6 +16,7 @@ import { DirectiveDirective } from './directive.directive';
 import { DatePipe } from './date.pipe';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { DatePipe } from './date.pipe';
     ProjectComponent,
     ProjectFormComponent,
     DirectiveDirective,
-    DatePipe
+    DatePipe,
+ 
   
 
   ],

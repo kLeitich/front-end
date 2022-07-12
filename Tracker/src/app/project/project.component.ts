@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ServiceService} from 'src/app/service.service'
 import {project} from '../models/project'
 import {member} from '../models/profile'
+import { profile } from '../models/profile';
 
 @Component({
   selector: 'app-project',
@@ -12,6 +13,8 @@ export class ProjectComponent implements OnInit {
   index=0
   display:any
   project!:project[]
+  member!:member[]
+  profile!:profile
  
   image_url='https://res.cloudinary.com/jeddy/'
   constructor(private ServiceService:ServiceService) { }

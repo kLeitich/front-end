@@ -7,13 +7,13 @@ import { RegisterComponent } from './register/register.component';
 import { UpdateProfileComponent } from './users/update-profile/update-profile.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
+
 const routes: Routes = [
   {path:'', component:HomepageComponent},
   {path:'project', component:ProjectComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'my-profile',component:UserProfileComponent},
-  
   {path:'update-profile',component:UpdateProfileComponent}
 ];
 

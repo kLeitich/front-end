@@ -57,18 +57,18 @@
   </div>
  
   <!-- {{display.name}} -->
-    <div class="cards">
-        <div *ngFor="let project of project" class="card">
-            <img src="{{image_url+project.project_image}}" />
-            <h6><strong>Project Name:</strong>{{project.name}}</h6>
-            <p><strong>Description:</strong>{{project.description}}</p>
-            <p><strong>Created_by:</strong>{{project.user}}</p> 
-           
-           
-            <a class="btn btn-sm btn-light" href="{{project.url}}">View</a>
-        </div>
-      
-        </div>
+  <div class="card1">
+ 
+     <div *ngFor="let project of project" >
+         <div class="card-image">
+             <img src="{{image_url+project.project_image}}" />
+         </div>
+         <div class="card-info">
+             <a class="btn " href="">{{project.name}}</a> 
+         </div>
+       
+     </div>
+</div>
 </div>
 
 
@@ -96,7 +96,7 @@
   <div class="text">
     <p><p class="leading-relaxed mb-6 ">I developed an interest in Data Science and I started looking at options on where I could do it. Moringa School came to mind because I had heard of so many good reviews about their programs. My initial expectation was that I would be here to learn more about exploratory data analysis and understand more about machine learning using R.</p>
     <h6>Mary Njoroge</h6>
-    <h5>Technical Mentor</h5>
+    <h5>Software Development Student</h5>
   </div>
   <div class="image">
     <img src="../../assets/images/person.jpg" alt="">
@@ -109,13 +109,31 @@
   </div>
   <div class="links">
     <p>Ngong Lane, Ngong Lane Plaza,1st floor,Nairobi Kenya </p>
-    <p><span class="iconify" data-icon="bxs:phone-call" style="color: #fa521c;"></span >  +254 712 293 878 (Amissions/General Enquiries) </p>
-      <p><span class="iconify" data-icon="bxs:phone-call" style="color: #fa521c;"></span> +254 741 493 565 (Data Science) </p>
-      <p> <span class="iconify" data-icon="bxs:phone-call" style="color: #fa521c;"></span>+254 712 293 878 (Whatsapp) </p> 
-      <p><span class="iconify" data-icon="carbon:email" style="color: #fa521c;"></span>contact@moringaschool.com </p>
-      <p><span class="iconify" data-icon="carbon:email" style="color: #fa521c;"></span>admissions@moringaschool.com 
-     </p>
-     <p><span class="iconify" data-icon="carbon:email" style="color: #fa521c;"></span>P.O Box 28860-00100, Nairobi </p>
+    <div>
+      <p><span class="iconify" data-icon="bxs:phone-call" style="color: #fa521c;"></span></p>
+      <p>  +254 712 293 878 (Admissions/General Enquiries) </p>
+    </div>
+    <div>
+      <p><span class="iconify" data-icon="bxs:phone-call" style="color: #fa521c;"></span></p>
+      <p>  +254 741 493 565 (Data Science) </p>
+    </div>
+    <div>
+      <p><span class="iconify" data-icon="bxs:phone-call" style="color: #fa521c;"></span></p>
+      <p> +254 712 293 878 (Whatsapp) </p>
+    </div>
+    <div>
+      <p><span class="iconify" data-icon="carbon:email" style="color: #fa521c;"></span></p>
+      <p>  contact@moringaschool.com </p>
+    </div>
+    <div>
+      <p><span class="iconify" data-icon="carbon:email" style="color: #fa521c;"></span></p>
+      <p>  admissions@moringaschool.com  </p>
+    </div>
+    <div>
+      <p><span class="iconify" data-icon="carbon:email" style="color: #fa521c;"></span></p>
+      <p>  P.O Box 28860-00100, Nairobi </p>
+    </div>
+     
      <div class="media">
         <a href=""><span class="iconify" data-icon="cib:facebook" style="color: white;"></span></a>
         <a href=""><span class="iconify" data-icon="entypo-social:linkedin-with-circle" style="color: white;"></span></a>
