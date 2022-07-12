@@ -13,6 +13,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'my-profile',component:UserProfileComponent},
+  
   {path:'update-profile',component:UpdateProfileComponent}
 ];
 

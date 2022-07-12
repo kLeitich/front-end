@@ -9,7 +9,8 @@ import {member} from '../models/profile'
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-
+  index=0
+  display:any
   project!:project[]
  
   image_url='https://res.cloudinary.com/jeddy/'
@@ -17,6 +18,15 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.Project()
+    //setInterval(this.changeIndex, 1000);
+  }
+ 
+   changeIndex() {
+    if(this.index == 3) {
+        this.index = 0	
+      }
+    this.display=this.project[this.index]
+    this.index += 1
   }
 
   Project():void{

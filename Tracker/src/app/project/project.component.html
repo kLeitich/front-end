@@ -17,7 +17,8 @@
     <div class="container">
         <div class="project" id="one">
          <h5>Featured Project</h5><hr>
-        </div>
+    </div>
+    {{display.name}}
      <div class="cards">
         <div *ngFor="let project of project" class="card">
             <img src="{{image_url+project.project_image}}" />

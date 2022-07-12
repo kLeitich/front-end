@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {project} from '../models/project'
+import { Router } from '@angular/router';
+
 import {ServiceService} from 'src/app/service.service'
+
 
 @Component({
   selector: 'app-homepage',
@@ -10,13 +13,17 @@ import {ServiceService} from 'src/app/service.service'
 export class HomepageComponent implements OnInit {
   image_url='https://res.cloudinary.com/jeddy/'
   project!:project[]
-  constructor(private ServiceService:ServiceService) { }
-
+  
+  constructor(private ServiceService:ServiceService,private router: Router,
+    ) { }
 
   ngOnInit(): void {
-    this.Project()
+      this.Project()
 
+      
+     
   }
+  
   Project():void{
     this.ServiceService.Project().subscribe(project=>{
       this.project=project
