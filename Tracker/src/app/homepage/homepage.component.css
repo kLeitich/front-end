@@ -482,6 +482,13 @@ iframe{
     font-size: 1.3vw;
    
 }
+.links div{
+    display: flex;
+    
+  }
+  .links div p{
+    padding: 0.3vw;
+  }
 
 @media screen and (max-width: 500px) {
     .footer{
@@ -525,6 +532,7 @@ iframe{
    }
     .links .iconify{
         font-size: 2vw;
+        margin-left: -8vw;
     }
     .media .iconify{
         font-size: 2vw;
@@ -535,12 +543,20 @@ iframe{
         width: 100%;
         margin-top: 3vw;
         margin-bottom: 3vw;
-        padding-left: 2vw;
+        
+        margin-left: 2vw;
     }
     .links{
         margin-left: 7vw;
         width: 100%;
     }
+    .links div{
+        display: flex;
+        
+      }
+      .links div p{
+        padding: 0.3vw;
+      }
 }
 /* ....................... */
 .card{
@@ -579,4 +595,38 @@ iframe{
   .container{
     margin-left: 5vw;
   }
+  /* ....................... */
+  .card1{
+    display: flex;
+    margin-top: 2vw;
+    justify-content: space-around;
+    margin-bottom: 7vw;
+    margin-left: 10vw;
+  }
+  .card-info{
+   
+    text-align: center;
+    margin-left: 2vw;
+    margin-top: -1vw;
+    background-color: 
+    #0e173d;
+   
+    position: absolute;
+    margin-left: 4vw;
+    border-radius: 0.2vw;
   
+  }
+  .card-image img{
+    width: 25vw;
+    height: 17vw;
+    border-radius: 0.2vw;
+    position: relative;
+    padding-left: 3vw;
+    border-radius: 0.2vw;
+   
+  }
+  .card-info a{
+    width: 20vw;
+    color: white;
+    font-weight: 600;
+  }
