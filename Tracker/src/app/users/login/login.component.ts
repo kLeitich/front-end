@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { Emitters } from 'src/app/emitters/emitters';
 
 @Component({
   selector: 'app-login',
@@ -22,9 +23,13 @@ export class LoginComponent implements OnInit {
         },
         { withCredentials: true }
       )
-      .subscribe((res)=>{
-        // console.log(res)
+    
+      .subscribe((res:any)=>{
+        console.log(res.jwt)
+
         this.router.navigate(['/my-profile']);
+
+        Emitters.authEmitter.emit(true);
       })
 
   }
