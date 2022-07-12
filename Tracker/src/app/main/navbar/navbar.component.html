@@ -1,15 +1,27 @@
 <!-- ..........navbar..................... -->
 <div class="nav">
   <div class="logo">
-      <img src="../../assets/logo.png" alt="logo">
+      <img src="../../assets/images/logo.png" alt="logo">
   </div>
-  <div class="block">
+  
+  <div class="block" *ngIf="value">
+    <a href="">Home</a>
+    <a href="https://moringaschool.com/about-us/">About us</a>
+    <a href="">Projects</a>
+    <a id="log" routerLink="/login">Logout</a>
+  </div>
+  
+  <ng-template>
+    <div class="block">
       <a href="">Home</a>
       <a href="https://moringaschool.com/about-us/">About us</a>
-      <a href="">Projects</a>
       <a id="log" routerLink="/login">Login</a>
+
+    </div>
+  </ng-template>
+
       <a id="log" routerLink="/logout">Logout</a>
 
   </div>
   
-</div>
+
