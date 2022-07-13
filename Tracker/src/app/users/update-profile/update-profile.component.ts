@@ -20,18 +20,25 @@ export class UpdateProfileComponent implements OnInit {
 ) { }
   
   ngOnInit(): void {
-    this.Profile()
+    //this.Profile()
   }
 
 
 
-  updateData(value: any) {
-    let body = {
+  updateProfile(value: any) {
+    console.log(value)
+    let newProfile = {
+      first_name : value.first_name,
+      last_name : value.last_name,
       bio: value.bio,
-      phone_number: value.phone_number
+      image: value.image,
+      phone_number: value.phone_number,
+      twitterLink: value.twitterLink,
+      facebookLink: value.facebookLink,
+      githubLink: value.githubLink
     }
 
-    this.ProfileService.updateData(body, `2`)
+    this.ProfileService.updateData(newProfile, `2`)
       .subscribe(response => {
         console.log(response)
       })
@@ -40,13 +47,17 @@ export class UpdateProfileComponent implements OnInit {
 
 
   
-  Profile():void{
-    console.log('im working')
-    this.ServiceService.Profile().subscribe(profile=>{
-      this.profile=profile
-      console.log(profile)
-    })
-  }
+  // Profile():void{
+  //   console.log('im working')
+  //   this.ServiceService.Profile().subscribe(profile=>{
+  //     this.profile=profile
+  //     console.log(profile)
+  //   })
+  // }
+
+
+
+
   // Cohort():void{
   //   // console.log(this.ServiceService.Profile().subscribe(Profile))
   //   this.ServiceService.Cohort().subscribe(cohort=>{
