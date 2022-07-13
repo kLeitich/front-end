@@ -103,6 +103,7 @@
   
   #aboutus .story {
     display: flex;
+    
     justify-content: space-between;
     align-items: flex-start;
     padding: 10% 0;
@@ -165,6 +166,7 @@
     align-items: flex-start;
     padding: 10% 0;
     width: 50%;
+    margin-top: 1.5vw;
   }
   
   #aboutus .story .description span {
@@ -361,7 +363,7 @@ iframe{
     }
 }
 .part1{
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   
@@ -378,4 +380,9 @@ iframe{
 }
 .members .title p{
   font-weight: 600;
+}
+.btn{
+  background-color: #fa521c;
+  color: white;
+  margin-bottom: 1vw;
 }

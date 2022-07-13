@@ -1,12 +1,14 @@
+<app-navbar></app-navbar>
 
 <body>
     
     <div id="aboutus">
         <div class="story"*ngFor="let project of project">
-            <div class="img">
+            
+            <div class="part1">
+              <div class="img">
                 <img src="{{image_url+project.project_image}}" />
             </div>
-            <div class="part1">
                     <div class="description">
                     <span>{{project.name}}</span>
                     <p>{{project.description}}</p>
@@ -16,19 +18,20 @@
                         <p> {{project.user}}</p>
                     </div>
                     
-                    <a class="btn btn-sm btn-dark" href="{{project.url}}">View</a>
+                    <a class="btn " href="{{project.url}}">View</a>
                     
                 </div>
-                <!-- <div class="member" >
+                <div class="member" >
                     <p class="title">Members</p>
-                    <div class="div"*ngFor="let member in member">
+                    <div class="div"*ngFor="let member of member">
                         <p><span class="iconify" data-icon="bi:person-circle"></span></p>
-                        <p>{{member.name}}</p>
+                        <p>{{member.id}}</p>
                     </div>
             
                 </div>
-            -->
+           
             </div>
+            
             
         </div>
  

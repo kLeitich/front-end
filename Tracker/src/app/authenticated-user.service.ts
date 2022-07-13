@@ -15,14 +15,14 @@ export class AuthenticatedUserService {
   getUser() {
     const Token=localStorage.getItem('Token')
     return this.http.get<User>(
-      'http://localhost:8000/api/authenticated_user/',
+      'https://backendjw.herokuapp.com/api/authenticated_user/',
 
       { withCredentials: true,headers:{Authorization:'Bearer '+ Token } }
     );
   }
 
   logOut() {
-    return this.http.get('http://localhost:8000/api/logout/', {
+    return this.http.get('https://backendjw.herokuapp.com/api/logout/', {
       withCredentials: true,
     });
   }

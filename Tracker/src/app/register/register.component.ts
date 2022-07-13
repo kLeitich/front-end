@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {HttpClient} from '@angular/common/http';
 
-import {User} from '../models/user.model';
+import {user} from '../models/user.model';
 
 
 import {Router} from '@angular/router';
@@ -16,7 +16,7 @@ import {Router} from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  user!: User; 
+  user!: user; 
    
   constructor(private http: HttpClient, private router: Router) {}
  
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
   submit(name:string,username:string, email:string, password:string): void {
  
     this.http
-    .post<object>('http://localhost:8000/api/register/',
+    .post<object>('https://backendjw.herokuapp.com/api/register/',
     {
       name: name,
       username: username,
@@ -39,6 +39,7 @@ export class RegisterComponent implements OnInit {
     }
     )
     .subscribe((res) => {
+  
         this.router.navigate(['/login']);
       });
   
