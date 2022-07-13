@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   submit(username: string, password: string): void {
     this.http
       .post<object>(
-        'https://backendjw.herokuapp.com/api/login/',
+        'http://127.0.0.1:8000/api/login/',
         {
           username: username,
           password: password,
