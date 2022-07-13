@@ -18,8 +18,10 @@ export class ProjectComponent implements OnInit {
   member!:member[]
   profile!:profile[]
   user!:user[]
- 
+  
   image_url='https://res.cloudinary.com/jeddy/'
+
+  
   constructor(private ServiceService:ServiceService) { }
 
   ngOnInit(): void {
@@ -60,5 +62,6 @@ export class ProjectComponent implements OnInit {
       console.log(profile)
     })
   }
+  
 }
  

@@ -63,7 +63,7 @@ body{
     height:42vw ;
     color: white;
 }
-.container h1{
+.container h2{
     padding-bottom: 2.3vw;
     font-weight: 700;
     font-size: 2.3vw;
@@ -267,14 +267,14 @@ body{
 }
 
 #small .floating-cards div p {
-    color: #6f6f6f;
+    color: #252b42;
     font-weight: 500;
     letter-spacing: 0.05vw;
     font-size: 0.9vw;
 }
 @media screen and (max-width: 500px) {
     #small .floating-cards div p {
-        color: #6f6f6f;
+        color: #252b42;
         font-weight: 500;
         letter-spacing: 0.05vw;
         font-size: 3.7vw;
@@ -326,11 +326,11 @@ hr{
     
 }
 .number1 p{
-    font-size: 2vw;
+    font-size: 1.7vw;
     
 }
 .number1 h6{
-    font-size: 3vw;
+    font-size: 2.7vw;
     text-align: center;
 }
 #num{
@@ -607,13 +607,13 @@ iframe{
    
     text-align: center;
     margin-left: 2vw;
-    margin-top: -1vw;
+    margin-top: -1.2vw;
     background-color: 
-    #0e173d;
-   
+    #fa521c;
     position: absolute;
-    margin-left: 4vw;
+    margin-left: 6vw;
     border-radius: 0.2vw;
+    padding-top: 1vw;
   
   }
   .card-image img{
@@ -626,7 +626,8 @@ iframe{
    
   }
   .card-info a{
-    width: 20vw;
+    width: 16vw;
     color: white;
     font-weight: 600;
+    margin-top: -0.6vw;
   }

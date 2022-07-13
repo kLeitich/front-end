@@ -8,14 +8,15 @@
     <a href="">Home</a>
     <a href="https://moringaschool.com/about-us/">About us</a>
     <a routerLink="/project">Projects</a>
-
+    <a id="log" routerLink="/login" *ngIf="!user">Login</a>
     <ng-container *ngIf="is_loggedIn">
       <a id="log" routerLink="/login">student-dashboard</a>
       <a routerLink="/admin-dashboard">admin-dashboard</a>
-      <a id="log" routerLink="/">Logout</a>
+  
+      <a class="nav-link" routerLink="/homepage" (click)="logOut()" *ngIf="user">Log Out</a> 
     </ng-container>
     
-    <a id="log" routerLink="/login">Login</a>
+   
   </div>
   
   <!-- <ng-template> -->

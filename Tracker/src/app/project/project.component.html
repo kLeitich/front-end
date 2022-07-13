@@ -4,12 +4,12 @@
     
     <div id="aboutus">
         <div class="story"*ngFor="let project of project">
-            
+          <div class="img">
+            <img src="{{image_url+project.project_image}}" />
+        </div>
+               
             <div class="part1">
-              <div class="img">
-                <img src="{{image_url+project.project_image}}" />
-            </div>
-                    <div class="description">
+         <div class="description">
                     <span>{{project.name}}</span>
                     <p>{{project.description}}</p>
                 
@@ -18,14 +18,14 @@
                         <p> {{project.user}}</p>
                     </div>
                     
-                    <a class="btn " href="{{project.url}}">View</a>
+                    <a class="btn "  style="width: 10vw;" href="{{project.url}}">View</a>
                     
                 </div>
                 <div class="member" >
                     <p class="title">Members</p>
-                    <div class="div"*ngFor="let member of member">
+                    <!-- <div class="div"*ngFor="let member of member"> -->
                         <p><span class="iconify" data-icon="bi:person-circle"></span></p>
-                        <p>{{member.id}}</p>
+                        <!-- <p>{{member.id}}</p> -->
                     </div>
             
                 </div>
@@ -35,7 +35,7 @@
             
         </div>
  
-    </div>
+    <!-- </div> -->
     
    <!-- ....................................... -->
 <div class="footer">
