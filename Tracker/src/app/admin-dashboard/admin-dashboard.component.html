@@ -1,17 +1,7 @@
+<app-navbar></app-navbar>
 <!-- ..........navbar..................... -->
-<div class="nav">
-    <div class="logo">
-        <img src="../../assets/images/logo.png" alt="logo">
-    </div>
-    <div class="block">
-        <a href="">Home</a>
-        <a href="https://moringaschool.com/about-us/">About us</a>
-        <a routerLink="/project">Projects</a>
-        <a id="log" routerLink="/login">Login</a>
 
-    </div>
-</div>
-<div class=" wrapper hold-transition  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="background-color:#111F3C ;">
+<div  class=" wrapper hold-transition  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="background-color:#111F3C ;">
 
 <div class="preloader flex-column justify-content-center align-items-center">
 <img class="animation__wobble" src="/assets/images/logo.png" alt="AdminLogo" height="60" width="260">
@@ -21,7 +11,7 @@
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#111F3C ;">
 <div class="sidebar">
 
-<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+<div class="user-panel mt-3 pb-3 mb-3 d-flex"  *ngFor="let user of user">
 <div class="image">
 <img src="assets/images/naomi (1).jpg" class="img-circle elevation-2" alt="User Image">
 </div>
@@ -55,7 +45,7 @@ Dashboard
 </ul>
 </li>
 <li class="nav-item">
-<a href="http://127.0.0.1:8000/admin/login/?next=/admin/" class="nav-link text-white">
+<a href="" class="nav-link text-white">
 <i class="nav-icon fas fa-th"></i>
 <p>
 Manage students
@@ -65,7 +55,7 @@ Manage students
 </li>
 
 <li class="nav-item">
-<a href="http://localhost:4200/admin-dashboard" class="nav-link text-white">
+<a href="" class="nav-link text-white">
 <i class="nav-icon fas fa-table"></i>
 <p>
 Manage Projects
@@ -73,7 +63,7 @@ Manage Projects
 </a>
 </li>
 <li class="nav-item">
-    <a href="http://localhost:4200/admin-dashboard" class="nav-link text-white">
+    <a href="" class="nav-link text-white">
     <i class="nav-icon fas fa-table"></i>
     <p>
     Manage Cohorts
@@ -104,7 +94,7 @@ Manage Projects
 </div>
 </div>
 
-<div class="profile-info" style=" margin-bottom: 1cm; margin-left: 2cm; margin-right: 2cm;  background-color: white;" >
+<!-- <div class="profile-info" style=" margin-bottom: 1cm; margin-left: 2cm; margin-right: 2cm;  background-color: white;" >
     <div class="row" style="padding: 1.5cm;" >
         <div class="col">
             <div class="profile-pic">
@@ -141,7 +131,7 @@ Manage Projects
             <p>#Developement code</p>
         </div>
     </div>
-</div>
+</div> -->
 
 <section class="content" style="margin-bottom: 1cm;" >
 <div class="container-fluid">
@@ -218,7 +208,7 @@ Manage Projects
 <div class="card-header">
 <h3 class="card-title">Latest Members</h3>
 <div class="card-tools">
-<span class="badge badge-danger">3 New Members</span>
+<span class="badge badge-danger"> New Members</span>
 <button type="button" class="btn btn-tool" data-card-widget="collapse">
 <i class="fas fa-minus"></i>
 </button>
@@ -230,20 +220,17 @@ Manage Projects
 
 <div class="card-body p-0">
 <ul class="users-list clearfix">
-<li>
-<img src="assets/images/person.jpg" alt="User Image">
-<a class="users-list-name" href="#">Alexander Pierce</a>
-<span class="users-list-date">Today</span>
-</li>
-<li>
-<img src="assets/images/person.jpg" alt="User Image">
-<a class="users-list-name" href="#">Norman</a>
-<span class="users-list-date">Yesterday</span>
-</li>
-<li>
-<img src="assets/images/person.jpg" alt="User Image">
-<a class="users-list-name" href="#">Jane</a>
-<span class="users-list-date">12 Jan</span>
+<li *ngFor="let user of user">
+    <div class="row">
+        <div class="col">
+            <a class="users-list-name" href="#">{{user.username}}</a>
+        </div>
+        <div class="col">
+            <span class="users-list-date">{{user.email}}</span>
+        </div>
+    </div>
+
+
 </li>
 </ul>
 
@@ -259,9 +246,62 @@ Manage Projects
 
 </div>
 <div class="card-footer clearfix">
-    <a href="#" class="btn btn-sm float-left" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Student</a>
+    <a href="#" class="btn btn-sm float-left" data-toggle="modal" data-target="#addstudent" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Student</a>
     </div>
-<div class="card">
+    <div class="modal fade" id="addstudent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form >
+            
+                        
+                    <h4 class="text-center h-font-semibold">ADD A STUDENT</h4>
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="name"> name</label>
+                        <input type="text"#name name="name" id="name" class="form-control form-control-lg" />                    
+                    </div>
+    
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="username"> Username</label>
+                      <input type="text"#username name="username" id="username" class="form-control form-control-lg" />                    
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="email"> Email</label>
+                    <input type="email"#email name="email" id="email" class="form-control form-control-lg" />                    
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="c_student"> Cohort</label>
+                    <input type="text" #c_student name="c_student" id="c_student" class="form-control form-control-lg">
+                    
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="stack"> Stack</label>
+                    <input type="text" #stack name="stack" id="stack" class="form-control form-control-lg">
+                    
+                </div>
+                
+  
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" style="color:white;width: 15vw;padding-left: 1vw;background-color:
+                        #fa521c;font-weight: 500;font-size: 1.2vw;" class="btn ">Add Student</button>
+                      </div>
+                </form>
+                    
+                  
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+<div class="card" id="student">
     <div class="card-header border-transparent">
     <h3 class="card-title">Students</h3>
     <div class="card-tools">
@@ -279,23 +319,23 @@ Manage Projects
     <table class="table m-0">
     <thead>
     <tr>
-    <th><i class="fa-thin fa-square-check"></i></th>
+    <!-- <th><i class="fa-thin fa-square-check"></i></th> -->
     <th>Id</th>
     <th>Student Name</th>
     <th>Email</th>
-    <th>Status</th>
-    <th>Date Added</th>
+    <th>Username</th>
     <th>Actions</th>
     </tr>
     </thead>    
     <tbody>
-    <tr>
-    <td><i class="fa-thin fa-square-check"></i> </td>
-    <td><a href="#">1</a></td>
-    <td>Naomy Msupu</td>
-    <td>BurgerFest</td>
-    <th><a href="#">link</a></th>
-    <th>22-06-02</th>
+    <tr *ngFor="let user of user">
+    <!-- <td><i class="fa-thin fa-square-check"></i> </td> -->
+    <td><a href="#">{{user.id}}</a></td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.username}}</td>
+    <!-- <th><a href="#">{{user.username}}</a></th> -->
+    <!-- <th>22-06-02</th> -->
     <th>
         <div class="row">
             <div class="col">
@@ -307,42 +347,7 @@ Manage Projects
         </div>
     </th>
     </tr>
-    <tr>
-        <td><i class="fa-thin fa-square-check"></i> </td>
-        <td><a href="#">1</a></td>
-        <td>Naomy Msupu</td>
-        <td>BurgerFest</td>
-        <th><a href="#">link</a></th>
-        <th>22-06-02</th>
-        <th>
-            <div class="row">
-                <div class="col">
-                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                </div>
-                <div class="col">
-                    <a href="#"><i class="fa-solid fa-trash-can" style="color: red;" ></i></a>
-                </div>
-            </div>
-        </th>
-    </tr>
-    <tr>
-        <td><i class="fa-thin fa-square-check"></i> </td>
-        <td><a href="#">1</a></td>
-        <td>Naomy Msupu</td>
-        <td>BurgerFest</td>
-        <th><a href="#">link</a></th>
-        <th>22-06-02</th>
-        <th>
-            <div class="row">
-                <div class="col">
-                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
-                </div>
-                <div class="col">
-                    <a href="#"><i class="fa-solid fa-trash-can" style="color: red;" ></i></a>
-                </div>
-            </div>
-        </th>
-    </tr>
+
     
     
     </tbody>
@@ -353,9 +358,69 @@ Manage Projects
     
     </div>
     <div class="card-footer clearfix">
-        <a href="#" class="btn btn-sm float-left" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Project</a>
+        <a href="#" class="btn btn-sm float-left" data-toggle="modal" data-target="#addproject" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Project</a>
+
         </div>
-<div class="card">
+
+        <!-- Modal -->
+<div class="modal fade" id="addproject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form >
+        
+                    
+                <h4 class="text-center h-font-semibold">ADD A PROJECT</h4>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="0name"> Project Owner</label>
+                    <input type="text"#oname name="oname" id="oname" class="form-control form-control-lg" />                    
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="username"> Project Name</label>
+                  <input type="text"#pname name="pname" id="pname" class="form-control form-control-lg" />                    
+              </div>
+              <div class="form-outline mb-4">
+                <label class="form-label" for="description"> Description</label>
+                <input type="textarea"#description name="description" id="description" class="form-control form-control-lg" />                    
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="project_image"> Project Image</label>
+                <input type="file" #project_image name="project_image" id="project_image" class="form-control form-control-lg">
+                
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="url"> Project URL</label>
+                <input type="text" #url name="url" id="url" class="form-control form-control-lg">
+                
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="date_posted"> Date Posted</label>
+                <input type="date" #date_posted name="date_posted" id="date_posted" class="form-control form-control-lg">
+            </div>
+                        
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" style="color:white;width: 15vw;padding-left: 1vw;background-color:
+                    #fa521c;font-weight: 500;font-size: 1.2vw;" class="btn ">Add Project</button>
+                  </div>
+            </form>
+                
+              
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<div class="card" id="project">
 
 <div class="card-header border-transparent">
 <h3 class="card-title">Projects</h3>
@@ -374,23 +439,25 @@ Manage Projects
 <table class="table m-0">
 <thead>
 <tr>
-<th><i class="fa-thin fa-square-check"></i></th>
+<!-- <th><i class="fa-thin fa-square-check"></i></th> -->
 <th>Id</th>
-<th>Student Name</th>
+<th>Student-ID</th>
 <th>Project</th>
+<th>Description</th>
 <th>Repository</th>
 <th>Date Added</th>
 <th>Action</th>
 </tr>
 </thead>    
 <tbody>
-<tr>
-<td><i class="fa-thin fa-square-check"></i> </td>
-<td><a href="#">1</a></td>
-<td>Naomy Msupu</td>
-<td>BurgerFest</td>
-<th><a href="#">link</a></th>
-<th>22-06-02</th>
+<tr *ngFor="let project of project">
+<!-- <td><i class="fa-thin fa-square-check"></i> </td> -->
+<td><a href="#">{{project.id}}</a></td>
+<td>{{project.user}}</td>
+<td>{{project.name}}</td>
+<td>{{project.description}}</td>
+<th><a href="#">{{project.url}}</a></th>
+<th>{{project.date_posted  | date}}</th>
 <th>
     <div class="row">
         <div class="col">
@@ -414,9 +481,51 @@ Manage Projects
 
 </div>
 <div class="card-footer clearfix">
-    <a href="#" class="btn btn-sm float-left" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Cohort</a>
+    <a href="#" class="btn btn-sm float-left" data-toggle="modal" data-target="#addcohort" style="background-color: #FB6F36; color: white; border-radius: 1cm;" > <i class="fa-solid fa-plus"></i> Add new Cohort</a>
     </div>
-<div class="card">
+    <div class="modal fade" id="addcohort" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form >
+            
+                        
+                    <h4 class="text-center h-font-semibold">ADD A COHORT</h4>
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="cname">Cohort Name</label>
+                        <input type="text"#cname name="cname" id="cname" class="form-control form-control-lg" />                    
+                    </div>
+    
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="adate"> Admission Date</label>
+                        <input type="date" #adate name="adate" id="adate" class="form-control form-control-lg">
+                    </div>
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="gdate"> Graduation Date</label>
+                        <input type="date" #gdate name="gdate" id="gdate" class="form-control form-control-lg">
+                    </div>
+  
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" style="color:white;width: 15vw;padding-left: 1vw;background-color:
+                        #fa521c;font-weight: 500;font-size: 1.2vw;" class="btn ">Add Cohort</button>
+                      </div>
+                </form>
+                    
+                  
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+<div class="card" id="cohort">
 
 <div class="card-header border-transparent">
 <h3 class="card-title">Cohorts</h3>
@@ -435,23 +544,21 @@ Manage Projects
 <table class="table m-0">
 <thead>
 <tr>
-<th><i class="fa-thin fa-square-check"></i></th>
+<!-- <th><i class="fa-thin fa-square-check"></i></th> -->
 <th>Id</th>
 <th>Cohort Name</th>
-<th>Cohort Lead</th>
-<th>No. Students</th>
-<th>Date Added</th>
+<th>Admission Date</th>
+<th>Graduation Date</th>
 <th>Action</th>
 </tr>
 </thead>    
 <tbody>
-<tr>
-<td><i class="fa-thin fa-square-check"></i> </td>
-<td><a href="#">1</a></td>
-<td>Naomy Msupu</td>
-<td>BurgerFest</td>
-<th><a href="#">link</a></th>
-<th>22-06-02</th>
+<tr *ngFor="let cohort of cohort " >
+<!-- <td><i class="fa-thin fa-square-check"></i> </td> -->
+<td><a href="#">{{cohort.id}}</a></td>
+<td>{{cohort.name}}</td>
+<td>{{cohort.admission_date | date}}</td>
+<td>{{cohort.graduation_date | date}}</td>
 <th>
 <div class="row">
     <div class="col">

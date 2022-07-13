@@ -26,7 +26,6 @@ export class UpdateProfileComponent implements OnInit {
 
 
   updateProfile(value: any) {
-    console.log(value)
     let newProfile = {
       first_name : value.first_name,
       last_name : value.last_name,

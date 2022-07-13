@@ -16,6 +16,12 @@ export class UserProfileComponent implements OnInit {
   profile!:profile[]
   project!:project[]
   cohort!:cohort[]
+  authenticated!:boolean 
+  value=true
+  is_student=false
+  is_admin=false
+  a_user!: any;
+  is_loggedIn=false
   image_url='https://res.cloudinary.com/jeddy/'
   constructor(private ServiceService:ServiceService,
     private authentication: AuthenticatedUserService,
