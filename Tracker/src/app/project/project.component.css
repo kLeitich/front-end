@@ -113,7 +113,7 @@
     display: flex;
     align-items: center;
     color: #252B42;
-    font-size: 2vw;
+    font-size: 1.2vw;
     margin-bottom: 2%;
     font-weight: bold;
     font-family: 'lobster', serif;
@@ -173,7 +173,7 @@
     display: flex;
     align-items: center;
     color: #252B42;
-    font-size: 2vw;
+    font-size: 1.2vw;
     margin-bottom: 2%;
     font-weight: bold;
     font-family: 'poppins', serif;
@@ -188,7 +188,7 @@
   }
   #aboutus .story .description p {
     color: #252B42;
-    font-size: 1.1vw;
+    font-size: 1vw;
     line-height: 1.8vw;
   }
   }
@@ -406,16 +406,3 @@ iframe{
   display: flex;
 }
 
-/* .left .title hr,
-.right .title hr {
-  transform: rotate(90deg);
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 5vw;
-  outline: none;
-  border: none;
-  height: 2vw;
-  width: 0.2vw;
-  margin-right: 5%;
-  margin-top: 1%;
-  margin-left: 2%;
-} */

@@ -5,30 +5,17 @@
   </div>
   
   <div class="block" *ngIf="value">
-    <a href="">Home</a>
-    <a href="https://moringaschool.com/about-us/">About us</a>
-    <a routerLink="/project">Projects</a>
-    <a id="log" routerLink="/login" *ngIf="!user">Login</a>
-    <ng-container *ngIf="is_loggedIn">
-      <a id="log" routerLink="/login">student-dashboard</a>
-      <a routerLink="/admin-dashboard">admin-dashboard</a>
-  
-      <a class="nav-link" routerLink="/homepage" (click)="logOut()" *ngIf="user">Log Out</a> 
-    </ng-container>
-    
-   
-  </div>
-  
-  <!-- <ng-template> -->
-    <!-- <div class="block">
       <a href="">Home</a>
       <a href="https://moringaschool.com/about-us/">About us</a>
-      <a id="log" routerLink="/login">Login</a>
-
-
-    </div> -->
-  <!-- </ng-template> -->
-
+      <a routerLink="/project">Projects</a>
+      <a id="log" routerLink="/login" *ngIf="!user">Login</a>
+      <a id="log" routerLink="/my-profile"*ngIf="is_student">Dashboard</a>
+      <a routerLink="/admin-dashboard"*ngIf="is_admin">Dashboard</a>
+      <a class="nav-link" routerLink="/" (click)="logOut()" *ngIf="user">Log Out</a> 
+  
+    </div>
+  
+  
      
 
   </div>

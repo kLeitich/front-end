@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
   submit(name:string,username:string, email:string, password:string): void {
  
     this.http
-    .post<object>('https://backendjw.herokuapp.com/api/register/',
+    .post<object>('http://127.0.0.1:8000/api/register/',
     {
       name: name,
       username: username,
