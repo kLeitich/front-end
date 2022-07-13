@@ -13,7 +13,7 @@
 </div>
 <!-- ............background image....... -->
 <body>
-  <div class="container">
+  <div class="container"  style="height: 15cm;"  >
     <div class="title">
       <h1>Track your Moringa Projects</h1>
       <p>Keep Track of all your projects as a student at moringa school. <br> Access previous projects by Moringa alumnis  </p>
@@ -28,31 +28,46 @@
   <div class="floating-cards">
       <!-- one -->
       <div>
-        <span class="iconify" data-icon="carbon:add-alt" style="color: #fa521c;"></span>
+        <span class="iconify" data-icon="carbon:add-alt" style="color: #FA510F;"></span>
         <h5>Add</h5>
         <p>Add your projects to the  <br> Tracker Website  Track of all the work you have accomplished. </p>
       </div>
 
       <!-- two -->
       <div>
-        <span class="iconify" data-icon="fa:search" style="color: #fa521c;"></span>
+        <span class="iconify" data-icon="fa:search" style="color: #FA510F;"></span>
         <h5>View</h5>
         <p>View yours,cohort mates and alumnis projects added to the site   . </p>
       </div>
 
       <!-- three -->
       <div>
-        <span class="iconify" data-icon="carbon:collaborate" style="color: #fa521c;"></span>
+        <span class="iconify" data-icon="carbon:collaborate" style="color: #FA510F"></span>
         <h5>Collaborate</h5>
         <p> collaborate on projects  <br> both with your cohort mates or alumnis . </p>
       </div>
   </div>
 </section>
 <!-- ..................................Featured projects................ -->
-<div class="projects">
-  <h6>Featured Projects</h6> 
-  <hr>
+
+  <div class="container">
+        <div class="project" id="one">
+        <h5>Featured Project</h5><hr>
+        </div>
+    <div class="cards">
+        <div *ngFor="let project of project" class="card">
+            <img src="{{image_url+project.project_image}}" />
+            <h6><strong>Project Name:</strong>{{project.name}}</h6>
+            <p><strong>Description:</strong>{{project.description}}</p>
+            <p><strong>Created_by:</strong>{{project.user}}</p> 
+            <p id="date">Date_posted:{{project.date_posted|date}}</p>
+           
+            <a class="btn btn-sm btn-light" href="{{project.url}}">View</a>
+        </div>
+      
+        </div>
 </div>
+
 
 <!-- .............................Numbers -->
 <div class="numbers">

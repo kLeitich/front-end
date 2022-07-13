@@ -7,6 +7,7 @@ import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdateProfileComponent } from './users/update-profile/update-profile.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import { AddProjectComponent } from  './users/add-project/add-project.component';
 
 const routes: Routes = [
   {path:'', component:HomepageComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'my-profile',component:UserProfileComponent},
   {path:'update-profile',component:UpdateProfileComponent},
-  {path: 'admin-dashboard', component:AdminDashboardComponent}
+  {path: 'admin-dashboard', component:AdminDashboardComponent},
+  {path:'add-project',component:AddProjectComponent},
 ];
 
 @NgModule({

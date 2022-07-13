@@ -10,10 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectComponent } from './project/project.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 import { ProjectFormComponent } from './project-form/project-form.component';
-
+import { DirectiveDirective } from './directive.directive';
+import { DatePipe } from './date.pipe';
+import { AddProjectComponent } from './users/add-project/add-project.component';
 
 
 @NgModule({
@@ -26,13 +29,15 @@ import { ProjectFormComponent } from './project-form/project-form.component';
     UserProfileComponent,
     UpdateProfileComponent,
     ProjectFormComponent,
-    ProjectComponent,
-    AdminDashboardComponent
-  
+    DirectiveDirective,
+    AdminDashboardComponent ,
+    DatePipe,
+    AddProjectComponent
   
 
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
