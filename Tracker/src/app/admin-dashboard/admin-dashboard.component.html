@@ -11,12 +11,14 @@
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#111F3C ;">
 <div class="sidebar">
 
-<div class="user-panel mt-3 pb-3 mb-3 d-flex"  *ngFor="let user of user">
-<div class="image">
-<img src="assets/images/naomi (1).jpg" class="img-circle elevation-2" alt="User Image">
-</div>
+<div class="user-panel mt-3 pb-3 mb-3 d-flex"  >
+
 <div class="info">
-<a href="#" class="d-block text-white">Naomi Glow</a>
+<a href="#" class="d-block text-white" *ngIf="a_user" >{{a_user.username}}</a>
+</div>
+<div class="image" >
+    <span class="iconify" data-icon="healthicons:ui-user-profile-negative" style="color: white;"></span>
+    <!-- <img  src="{{image_url+profile.image}}" class="img-circle elevation-2" alt="User Image"> -->
 </div>
 </div>
 
@@ -141,10 +143,10 @@ Manage Projects
 <div class="info-box">
 <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 <div class="info-box-content">
-<span class="info-box-text">Langauges</span>
+<span class="info-box-text">Cohort</span>
 <span class="info-box-number">
-10
-<small>%</small>
+{{cohort.length}}
+
 </span>
 </div>
 
@@ -157,7 +159,7 @@ Manage Projects
 <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 <div class="info-box-content">
 <span class="info-box-text">Students</span>
-<span class="info-box-number">41,410</span>
+<span class="info-box-number" >{{profile.length}}</span>
 </div>
 
 </div>
@@ -170,25 +172,14 @@ Manage Projects
 <div class="info-box mb-3">
 <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 <div class="info-box-content">
-<span class="info-box-text">Techinical Mentors</span>
-<span class="info-box-number">760</span>
+<span class="info-box-text">Projects</span>
+<span class="info-box-number">{{project.length}}</span>
 </div>
 
 </div>
 
 </div>
 
-<div class="col">
-<div class="info-box mb-3">
-<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
-<div class="info-box-content">
-<span class="info-box-text">Alumini</span>
-<span class="info-box-number">0</span>
-</div>
-
-</div>
-
-</div>
 
 </div>
 
@@ -227,8 +218,8 @@ Manage Projects
                         
                     <h4 class="text-center h-font-semibold">ADD A STUDENT</h4>
                     <div class="form-outline mb-4">
-                        <label class="form-label" for="name"> name</label>
-                        <input type="text"#name name="name" id="name" class="form-control form-control-lg" />                    
+                        <label class="form-label" for="k"> name</label>
+                        <input type="text"#k name="k"  class="form-control form-control-lg" />                    
                     </div>
     
                     <div class="form-outline mb-4">
@@ -350,11 +341,15 @@ Manage Projects
 
                 <div class="form-outline mb-4">
                   <label class="form-label" for="name"> Project Name</label>
-                  <input type="text"#pname name="name" id="name" class="form-control form-control-lg" />                    
+                  <input type="text"#name name="name" id="name" class="form-control form-control-lg" />                    
               </div>
               <div class="form-outline mb-4">
-                <label class="form-label" for="member">Member</label>
-                <input type="textarea"#member name="member" id="member" class="form-control form-control-lg" />                    
+                <label for="member">Members</label>
+                    <select id="member" name="member"#member size="4" multiple>
+                    <option *ngFor="let user of user" value="{{ user.username }}">{{ user.username}}</option>
+                    </select>
+                <!-- <label class="form-label" for="member">Member</label>
+                <input type="textarea"#member name="member" id="member" class="form-control form-control-lg" />                     -->
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="description"> Description</label>
