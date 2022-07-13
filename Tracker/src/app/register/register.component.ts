@@ -6,7 +6,6 @@ import {user} from '../models/user.model';
 
 
 import {Router} from '@angular/router';
-import { FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -18,21 +17,20 @@ import { FormGroup } from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   user!: user; 
-   form!: FormGroup;
-
-   constructor(
    
-    private http: HttpClient,
-    private router: Router
-  ) {
-  }  ngOnInit(): void {
+  constructor(private http: HttpClient, private router: Router) {}
+ 
+  response!: any;
+  message!: string;
+
+  ngOnInit(): void {
    
   } 
   
   submit(name:string,username:string, email:string, password:string): void {
  
     this.http
-    .post('http://localhost:8000/api/register/',
+    .post<object>('https://backendjw.herokuapp.com/api/register/',
     {
       name: name,
       username: username,
@@ -41,8 +39,8 @@ export class RegisterComponent implements OnInit {
     }
     )
     .subscribe((res) => {
-        console.log(res)
-        this.router.navigate(['/login'])
+  
+        this.router.navigate(['/login']);
       });
   
     

@@ -1,17 +1,7 @@
+<app-navbar></app-navbar>
 <!-- ..........navbar..................... -->
-<div class="nav">
-    <div class="logo">
-        <img src="../../assets/images/logo.png" alt="logo">
-    </div>
-    <div class="block">
-        <a href="">Home</a>
-        <a href="https://moringaschool.com/about-us/">About us</a>
-        <a routerLink="/project">Projects</a>
-        <a id="log" routerLink="/login">Login</a>
 
-    </div>
-</div>
-<div class=" wrapper hold-transition  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="background-color:#111F3C ;">
+<div  class=" wrapper hold-transition  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" style="background-color:#111F3C ;">
 
 <div class="preloader flex-column justify-content-center align-items-center">
 <img class="animation__wobble" src="/assets/images/logo.png" alt="AdminLogo" height="60" width="260">
@@ -21,7 +11,7 @@
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#111F3C ;">
 <div class="sidebar">
 
-<div class="user-panel mt-3 pb-3 mb-3 d-flex">
+<div class="user-panel mt-3 pb-3 mb-3 d-flex"  *ngFor="let user of user">
 <div class="image">
 <img src="assets/images/naomi (1).jpg" class="img-circle elevation-2" alt="User Image">
 </div>

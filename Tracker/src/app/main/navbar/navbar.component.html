@@ -1,14 +1,36 @@
 <!-- ..........navbar..................... -->
 <div class="nav">
   <div class="logo">
-      <img src="../../assets/logo.png" alt="logo">
+      <img src="../../assets/images/logo.png" alt="logo">
   </div>
-  <div class="block">
+  
+  <div class="block" *ngIf="value">
+    <a href="">Home</a>
+    <a href="https://moringaschool.com/about-us/">About us</a>
+    <a routerLink="/project">Projects</a>
+    <a id="log" routerLink="/login" *ngIf="!user">Login</a>
+    <ng-container *ngIf="is_loggedIn">
+      <a id="log" routerLink="/login">student-dashboard</a>
+      <a routerLink="/admin-dashboard">admin-dashboard</a>
+  
+      <a class="nav-link" routerLink="/homepage" (click)="logOut()" *ngIf="user">Log Out</a> 
+    </ng-container>
+    
+   
+  </div>
+  
+  <!-- <ng-template> -->
+    <!-- <div class="block">
       <a href="">Home</a>
       <a href="https://moringaschool.com/about-us/">About us</a>
-      <a href="">Projects</a>
       <a id="log" routerLink="/login">Login</a>
+
+
+    </div> -->
+  <!-- </ng-template> -->
+
+     
 
   </div>
   
-</div>
+

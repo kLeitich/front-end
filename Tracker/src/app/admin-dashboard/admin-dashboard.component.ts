@@ -20,6 +20,7 @@ export class AdminDashboardComponent implements OnInit {
    form!: FormGroup;
   
 
+    image_url='https://res.cloudinary.com/jeddy/'
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
@@ -28,7 +29,7 @@ export class AdminDashboardComponent implements OnInit {
     this.getUser();
   }
   getUser(){
-    this.httpClient.get<any>('http://127.0.0.1:8000/api/users/').subscribe(
+    this.httpClient.get<any>('https://backendjw.herokuapp.com/api/users/').subscribe(
       response =>{
         console.log(response);
         this.user = response;
@@ -37,8 +38,10 @@ export class AdminDashboardComponent implements OnInit {
   }
 
   getProject(){
-    this.httpClient.get<any>('http://127.0.0.1:8000/api/projects').subscribe(
+    const Token=localStorage.getItem('Token')
+    this.httpClient.get<any>('https://backendjw.herokuapp.com/api/projects').subscribe(
       response => {
+        
         console.log(response);
         this.project = response;
       }

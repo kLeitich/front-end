@@ -1,3 +1,4 @@
+
 export class user {
     id!: any;
     username!: string;
@@ -7,5 +8,5 @@ export class user {
     cohort!: string;
     password!: string;
     
-
 }
+  
