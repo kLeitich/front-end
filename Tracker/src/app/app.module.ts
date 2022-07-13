@@ -16,6 +16,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { ProjectFormComponent } from './project-form/project-form.component';
 import { DirectiveDirective } from './directive.directive';
 import { DatePipe } from './date.pipe';
+import { AddProjectComponent } from './users/add-project/add-project.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { DatePipe } from './date.pipe';
     ProjectFormComponent,
     DirectiveDirective,
     AdminDashboardComponent ,
-    DatePipe
+    DatePipe,
+    AddProjectComponent
   
 
   ],

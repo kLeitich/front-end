@@ -1,77 +1,63 @@
-<!-- ..........navbar..................... -->
-<div class="nav">
-    <div class="logo">
-        <img src="../../../assets/images/logo.png" alt="logo">
-    </div>
-    <div class="block">
-        <a href="">Home</a>
-        <a href="https://moringaschool.com/about-us/">About us</a>
-        <a href="">Projects</a>
-        <a id="log" routerLink="/login">Login</a>
 
-    </div>
-</div>
 <body>
-<div class="container">
-    <!--user profile here-->
-   <div class="userdetails" >
-    <div *ngFor="let profile of profile" class="card">
-      
-        {{profile.first_name}}
-        <h6><strong></strong>{{profile.last_name}}</h6>
-        <!-- <img src="{{image_url+profile.profile_image}}" /> -->
-        <!-- <p><strong>Description:</strong>{{project.description}}</p>
-        <p><strong>Date_posted:</strong>{{project.date_posted}}</p> -->
-        <!-- <a class="btn btn-sm btn-light" href="">View</a> -->
-    </div>
-        <!-- <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-12">
-                <div class="text-center mt-3" >
-                <img  class="rounded-circle profile-img" src="assets/images/naomi (1).jpg" alt="profile-image" width="60%">
-                <h3 class="mt-4 h-font-semibold" >Naomi Trinity</h3>
-                <p class="p-description">naomitrinity@moringaschool.com</p>
-            </div>
-            </div>
-            <div class="col-lg-1 col-md-1 col-sm-0"></div>
-            <div class="col-lg-5 col-md-5 col-sm-12 mt-3">
-                <h4 class="h-font-semibold">BIO</h4>
-                <p class="p-description">Any fool can write code that a computer can understand. Good programmers write code that humans can understand</p>
-                <a href="" routerLink="/update-profile" ><button class="btn  btn-orange">Update Profile</button></a>
-            </div>
-            <div class="col-lg-1 col-md-1 col-sm-0"></div>
-        </div> -->
-   </div>
-        <!-- User projects here-->
-        <div class="userprojects mt-3">
-            <div class="row">
-                <!--loop card start-->
-                <div class="col-lg-3 col-md-3 col-sm-12 mt-3">
-                    <div class="uploaded-project">
-                        <img src="assets/images/project1.png" alt="projectscreenshot" width="100%">
-                        <a href=""><h5 class="text-center project-name">Moringa Project Tracking</h5></a>
-                    </div>
+    <div class="container">
+        <!--user profile here-->
+       <div class="userdetails">
+            <div class="row" *ngFor="let profile of profile" >
+                
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <div class="text-center mt-3" >
+                    <img  class="rounded-circle profile-img" src="{{image_url + profile.image}}" alt="profile-image" width="60%">
+                    <h3 class="mt-4 h-font-semibold" >{{profile.first_name}} {{profile.last_name}}</h3>
+                    <p class="p-description"></p>
+                    
+    
+                    <a href="{$ profile.githubLink $}" class="icon">View</a>
+    
+                    <a routerLink="{{profile.githubLink}}"><i class="fa-brands fa-github-square fa-2x ml-2 github"></i></a>
+                    <a href="{{profile.twitterLink}}"><i class="fa-brands fa-twitter fa-2x ml-2 twitter"></i></a>
+                    <a href="{{profile.facebookLink}}"><i class="fa-brands fa-facebook fa-2x ml-2"></i></a>
+                    <!-- <a href="{{profile.instagramLink}}"><i class="fa-brands fa-instagram fa-2x ml-2 insta"></i></a> -->
+                
+                
                 </div>
-                <!--loop card end-->
-                <!--place holders start (delete them)-->
-                <div class="col-lg-3 col-md-3 col-sm-12 mt-3"><div class="uploaded-project">
-                    <img src="assets/images/project1.png" alt="projectscreenshot" width="100%">
-                    <h5 class="text-center project-name">Moringa </h5>
-                </div></div>
-                <div class="col-lg-3 col-md-3 col-sm-12 mt-3"><div class="uploaded-project">
-                    <img src="assets/images/project1.png" alt="projectscreenshot" width="100%">
-                    <h5 class="text-center project-name">Project Tracking</h5>
-                </div></div>
-                <div class="col-lg-3 col-md-3 col-sm-12 mt-3"><div class="uploaded-project">
-                    <img src="assets/images/project1.png" alt="projectscreenshot" width="100%">
-                    <h5 class="text-center project-name">Project Tracking</h5>
-                </div></div>
-               
-                <!--place holders end (delete them)-->
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-0"></div>
+                <div class="col-lg-5 col-md-5 col-sm-12 mt-3">
+                    <h4 class="h-font-semibold">BIO</h4>
+                    <p class="p-description">{{profile.bio}}</p>
+                    <a href="" routerLink="/update-profile" ><button class="btn  btn-orange ml-2">Update Profile</button></a>
+                    <a href="" routerLink="/add-project" ><button class="btn  btn-orange ml-5">Add Project</button></a>
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-0"></div>
+    
+    
+    
             </div>
-        </div>
+    
+       </div>
+            <!-- User projects here-->
+            <div class="userprojects mt-3">
+                <div class="row">
+                    
+                  
+                    <!--place holders start (delete them)-->
+                    <div class="col-lg-4 col-md-4 col-sm-12 mt-3" *ngFor="let project of project">
+                        <div class="uploaded-project"  class="card">
+                        <img src="{{image_url+project.project_image}}" alt="projectscreenshot" width="100%">
+                        <div class="card-body ml-1 mr-1">
+                            <h4 class="text-center project-name">{{project.name}} </h4>
+                            <p>{{project.description}}</p>
+                        </div>
+                    </div></div>
 
+            <!--loop card end-->
 
-
-</div>
-
-</body>
+                </div>
+            </div>
+    
+    
+    
+    </div>
+    
+    </body>

@@ -1,3 +1,55 @@
 <body>
-    <h2 class="text-center" >Update Your Profile Here</h2>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-sm-0"></div>
+            <div class=" col-lg-6 col-md-6 col-sm-12">
+    <form #updateForm="ngForm" (submit)="updateData(updateForm)">
+
+        <h4 class="text-center h-font-semibold">Update tertereProfile</h4>
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="bio">Bio</label>
+                        <input type="text" name="bio" id="bio" ngModel class="form-control form-control-lg" />                  
+                      </div>
+
+                      <!-- <div class="form-outline mb-4">
+                        <label class="form-label" for="image">Profile Picture</label>
+                        <input type="file" formControlName="image" id="image" class="form-control form-control-lg" />                  
+                      </div> -->
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="phone_number">Phone Number</label>
+                        <input type="number" name="phone_number" id="bio" ngModel class="form-control form-control-lg" max="10" />                  
+                      </div>
+<!-- 
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="facebookLink">Facebook</label>
+                        <input type="url" formControlName="facebookLink" id="facebookLink" class="form-control form-control-lg" />                  
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="twitterLink">Twitter</label>
+                        <input type="url" formControlName="twitterLink" id="twitterLink" class="form-control form-control-lg" />                  
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="githubLink">Github</label>
+                        <input type="url" formControlName="githubLink" id="githubLink" class="form-control form-control-lg" />                  
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="instagramLink">Instagram</label>
+                        <input type="url" formControlName="instagramLink" id="instagramLink" class="form-control form-control-lg" />                  
+                      </div> -->
+
+                      <div class="pt-1 text-center">
+                        <button  type="submit" class="btn btn-orange ">Update Profile</button>
+                      </div>
+    </form>
+
+
+            </div>
+        </div>
+    </div>
+
+    
 </body>
