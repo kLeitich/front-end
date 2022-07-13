@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import {ServiceService} from 'src/app/service.service'
 import { cohort } from '../models/cohort';
 import { project } from '../models/project';
@@ -16,6 +17,8 @@ export class AdminDashboardComponent implements OnInit {
   project!: project[]
   cohort!: cohort[]
   user!: user[]
+   form!: FormGroup;
+  
 
   constructor(private httpClient: HttpClient) { }
 
@@ -49,5 +52,44 @@ export class AdminDashboardComponent implements OnInit {
       }
     );    
   }
+  // submit(name:string,username:string, email:string, c_student:string,stack:string): void {
+ 
+  //   this.httpClient.post('http://localhost:8000/api/users/',
+  //   {
+  //     name: name,
+  //     username: username,
+  //     email: email,
+  //     c_student:c_student,
+  //     stack: stack,
 
+  //   }
+  //   )
+  //   .subscribe((res) => {
+  //       console.log(res)
+        
+  //     });
+  
+    
+  // }
+  submitproject(k:string,name:string, description:string, member:string,project_image:any,url:any,date_posted:any): void {
+ 
+    this.httpClient.post('http://localhost:8000/api/projects/',
+    {
+      k: k,
+      name: name,
+      description: description,
+      member: member,
+      project_image:project_image,
+      url: url,
+      date_posted: date_posted,
+
+    }
+    )
+    .subscribe((res) => {
+        console.log(res)
+        
+      });
+  
+    
+  }
 }

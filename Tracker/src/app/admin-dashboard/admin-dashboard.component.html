@@ -193,7 +193,7 @@ Manage Projects
 <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 <div class="info-box-content">
 <span class="info-box-text">Alumini</span>
-<span class="info-box-number">2,000</span>
+<span class="info-box-number">0</span>
 </div>
 
 </div>
@@ -214,43 +214,7 @@ Manage Projects
 
 <div class="col-12">
 
-<div class="card">
-<div class="card-header">
-<h3 class="card-title">Latest Members</h3>
-<div class="card-tools">
-<span class="badge badge-danger"> New Members</span>
-<button type="button" class="btn btn-tool" data-card-widget="collapse">
-<i class="fas fa-minus"></i>
-</button>
-<button type="button" class="btn btn-tool" data-card-widget="remove">
-<i class="fas fa-times"></i>
-</button>
-</div>
-</div>
 
-<div class="card-body p-0">
-<ul class="users-list clearfix">
-<li *ngFor="let user of user">
-    <div class="row">
-        <div class="col">
-            <a class="users-list-name" href="#">{{user.username}}</a>
-        </div>
-        <div class="col">
-            <span class="users-list-date">{{user.email}}</span>
-        </div>
-    </div>
-
-
-</li>
-</ul>
-
-</div>
-
-<div class="card-footer text-center">
-<a href="javascript:">View All Users</a>
-</div>
-
-</div>
 
 </div>
 
@@ -356,6 +320,8 @@ Manage Projects
             </div>
         </div>
     </th>
+    
+
     </tr>
 
     
@@ -383,20 +349,24 @@ Manage Projects
           </button>
         </div>
         <div class="modal-body">
-            <form >
+            <form (submit)="submitproject(k.value,name.value,description.value,member.value,project_image.value,url.value,date_posted.value)">
         
                     
                 <h4 class="text-center h-font-semibold">ADD A PROJECT</h4>
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="0name"> Project Owner</label>
-                    <input type="text"#oname name="oname" id="oname" class="form-control form-control-lg" />                    
+                    <label class="form-label" for="user"> Project Owner</label>
+                    <input type="text"#k name="user" id="user" class="form-control form-control-lg" />                    
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="username"> Project Name</label>
-                  <input type="text"#pname name="pname" id="pname" class="form-control form-control-lg" />                    
+                  <label class="form-label" for="name"> Project Name</label>
+                  <input type="text"#pname name="name" id="name" class="form-control form-control-lg" />                    
               </div>
               <div class="form-outline mb-4">
+                <label class="form-label" for="member">Member</label>
+                <input type="textarea"#member name="member" id="member" class="form-control form-control-lg" />                    
+            </div>
+            <div class="form-outline mb-4">
                 <label class="form-label" for="description"> Description</label>
                 <input type="textarea"#description name="description" id="description" class="form-control form-control-lg" />                    
             </div>
