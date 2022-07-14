@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
  
     this.httpClient
     
-    .post<object>('http://127.0.0.1:8000/api/register/',
+    .post<object>('https://backendjw.herokuapp.com/api/register/',
     {
       name: name,
       username: username,

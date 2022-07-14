@@ -44,7 +44,7 @@ export class AdminDashboardComponent implements OnInit {
     );
   }
   getCohort(){
-    this.httpClient.get<any>('http://127.0.0.1:8000/api/cohort').subscribe(
+    this.httpClient.get<any>('https://backendjw.herokuapp.com/api/cohort').subscribe(
       response =>{
         console.log(response);
         this.cohort = response;
