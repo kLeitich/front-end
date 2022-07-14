@@ -24,16 +24,18 @@ export class HomepageComponent implements OnInit {
     constructor(private ServiceService:ServiceService,private http: HttpClient, private router: Router,private authentication: AuthenticatedUserService) {}
   
   ngOnInit(): void {
-      this.Project()
+    this.Project()
 
      
      
   }
-  
   Project():void{
     this.ServiceService.Project().subscribe(project=>{
       this.project=project
-    
+      for(let item of this.project){
+        console.log(this.image_url)
+      }
+      // console.log(project)
     })
   }
 }

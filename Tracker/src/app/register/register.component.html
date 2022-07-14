@@ -13,7 +13,7 @@
 
 					  <div class="form-outline mb-4">
                         <label class="form-label" for="name">Name</label>
-                        <input type="text"#name name="username" id="name" class="form-control form-control-lg" />                  
+                        <input type="text"#name name="name" id="name" class="form-control form-control-lg" />                  
                       
 					</div>
                       <div class="form-outline mb-4">
@@ -25,10 +25,10 @@
                         <input #email type="email" name="email" id="email" class="form-control form-control-lg" />
          
                       </div>
-    
+                   
                       <div class="form-outline mb-4">
                         <label class="form-label" for="password1">Password</label>
-                        <input #password type="password" name="password" id="password1" class="form-control form-control-lg" />
+                        <input #password type="password" name="password" id="password" class="form-control form-control-lg" />
          
                       </div>
                                                
@@ -37,8 +37,9 @@
 						#fa521c;font-weight: 500;font-size: 1.2vw;" class="btn ">Register</button>
                       </div>
     
-                      <p style="text-align:center ;">Already registered?<a routerLink="/login"
-                        style="color: #111F3C;font-weight: 600;padding-left: 1vw;padding-top: 2vw;">Login</a></p>
+                      <p style="text-align:center ;">Already registered?
+                        <!-- <a routerLink="login">Login</a> -->
+                      </p>
                    
                       
                     </form>

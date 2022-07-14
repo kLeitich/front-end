@@ -39,25 +39,27 @@
 </section>
 <!-- ..................................Featured projects................ -->
 
-  <div class="container">
-        <div class="project" id="one">
-        <h5>Featured Project</h5>
-  </div>
+  
+<div class="container">
+  <div class="project" id="one">
+  <h5>Featured Project</h5>
+</div>
+
+<!-- {{display.name}} -->
+<div class="card1">
+
+<div *ngFor="let project of project" >
+   <div class="card-image">
+       <img src="{{image_url+project.project_image}}" />
+   </div>
+   <div class="card-info">
+       <a class="btn " href="">{{project.name}}</a> 
+   </div>
  
-  <!-- {{display.name}} -->
-  <div class="card1">
- 
-     <div *ngFor="let project of project" >
-         <div class="card-image">
-             <img src="{{image_url+project.project_image}}" />
-         </div>
-         <div class="card-info">
-             <a class="btn " href="">{{project.name}}</a> 
-         </div>
-       
-     </div>
 </div>
 </div>
+</div>
+
 
 
 <!-- .............................Numbers -->

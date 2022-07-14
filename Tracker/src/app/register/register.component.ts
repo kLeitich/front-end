@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
 
   user!: user; 
    
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private httpClient: HttpClient, private router: Router) {}
  
   response!: any;
   message!: string;
@@ -26,10 +26,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
    
   } 
-  
+
   submit(name:string,username:string, email:string, password:string): void {
  
-    this.http
+    this.httpClient
+    
     .post<object>('http://127.0.0.1:8000/api/register/',
     {
       name: name,
@@ -39,8 +40,8 @@ export class RegisterComponent implements OnInit {
     }
     )
     .subscribe((res) => {
-  
-        this.router.navigate(['/login']);
+      console.log(res)
+        // this.router.navigate(['/login']);
       });
   
     
