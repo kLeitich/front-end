@@ -1,0 +1,23 @@
+.container{
+   margin-top: 3vw;
+}
+input{
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom:0.15vw solid;
+   border-color: #fa521c;
+   border-radius: 0;
+}
+.container h4{
+   margin-bottom: 1vw;
+   font-weight: 700;
+}
+section{
+   background-image: url(../../assets/images/white1.png), url(../../assets/images/white.png);
+   background-position: top left , bottom right ;
+   background-repeat: no-repeat, no-repeat;
+   padding-top: 5vw;
+   padding-bottom: 11vw;
+   margin-left: -1.5vw;
+}

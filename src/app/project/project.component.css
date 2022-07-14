@@ -1,0 +1,408 @@
+
+/* .....................navbar.................................... */
+.logo img{
+    width: 12vw;
+    margin-left: -10vw;
+    margin-top: 0.2vw;
+    margin-bottom: 0.2vw;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5vw;
+}
+.block a{
+    text-decoration: none;
+    color: black;
+    padding: 2vw;
+}
+.block{
+    margin-top: 1vw;
+    font-size: 1.2vw;
+}
+/* ...............................media queries........................ */
+@media screen and (max-width: 450px) {
+    .logo img{
+        width: 15vw;
+        margin-left: -10vw;
+        margin-top: 0.2vw;
+        margin-bottom: 0.2vw;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    .block a{
+        text-decoration: none;
+        color: black;
+        padding: 2vw;
+    
+    }
+    .block{
+        margin-top: 1vw;
+        font-size: 2.3vw;
+    }
+}
+/* ....................container..................... */
+.card-image img{
+  width: 25vw;
+  height: 17vw;
+  border-radius: 0.2vw;
+}
+.card1{
+  display: flex;
+  margin-top: 2vw;
+  justify-content: space-around;
+}
+.card-info{
+ 
+  text-align: center;
+  margin-left: 2vw;
+  margin-top: -1vw;
+  background-color: 
+  #fafafa;
+  color: white;
+  position: absolute;
+
+
+}
+.card-image{
+  position: relative;
+}
+.card-info a{
+  width: 20vw;
+}
+  /* ...............................................about-us................................................................ */
+
+  #aboutus .story .description {
+    width: 55%;
+    padding-left: 10%;
+  }
+  #aboutus .story .img img {
+    width: 100%;
+    height: 20vw;
+    transition: 0.3s;
+    position: relative;
+    transform: rotate(-10deg);
+    border: 0.1vw solid #494949;
+  }
+ .story .img {
+    position: relative;
+    width: 45%;
+    height: 20vw;
+    border: 0.1vw solid #494949;
+    transform: rotate(10deg);
+    backdrop-filter: blur(0.1vw);
+  }
+  #aboutus{
+    padding: 0 10%;
+    width: 100%;
+    background-color: 
+    #fafafa;
+  }
+  
+  #aboutus .story {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10% 0;
+  }
+  
+  #aboutus .story .description span {
+    display: flex;
+    align-items: center;
+    color: #252B42;
+    font-size: 1.2vw;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-family: 'lobster', serif;
+  }
+  
+  #aboutus .story .description span div {
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 50%;
+    background-color: #252B42;
+    margin-right: 2%;
+  }
+  #aboutus .story .description p {
+    color: #252B42;
+    font-size: 1.1vw;
+    line-height: 1.8vw;
+  }
+
+  /* ..............................................mediaqueries.......................................................... */
+  @media  screen and (max-width:500px){
+  
+  #aboutus .story .description {
+    width: 55%;
+    padding-left: 10%;
+  }
+  #aboutus .story .img img {
+    width: 100%;
+    transition: 0.3s;
+    position: relative;
+    transform: rotate(-10deg);
+    border: 0.1vw solid #494949;
+  }
+  #aboutus .story .img {
+    position: relative;
+    width: 45%;
+    border: 0.1vw solid #494949;
+    transform: rotate(10deg);
+    backdrop-filter: blur(0.1vw);
+  }
+  #aboutus{
+    padding: 0 10%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #aboutus .story {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10% 0;
+    width: 50%;
+    margin-top: 1.5vw;
+  }
+  
+  #aboutus .story .description span {
+    display: flex;
+    align-items: center;
+    color: #252B42;
+    font-size: 1.2vw;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-family: 'poppins', serif;
+  }
+  
+  #aboutus .story .description span div {
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 50%;
+    background-color: #252B42;
+    margin-right: 2%;
+  }
+  #aboutus .story .description p {
+    color: #252B42;
+    font-size: 1vw;
+    line-height: 1.8vw;
+  }
+  }
+  @media  screen and (max-width:350px){
+  
+    #aboutus .story .description {
+      width: 55%;
+      padding-left: 10%;
+    }
+    #aboutus .story .img img {
+      width: 100%;
+      transition: 0.3s;
+      position: relative;
+      transform: rotate(-10deg);
+      border: 0.1vw solid #494949;
+    }
+    #aboutus .story .img {
+      position: relative;
+      width: 45%;
+      border: 0.1vw solid #494949;
+      transform: rotate(10deg);
+      backdrop-filter: blur(0.1vw);
+    }
+    #aboutus{
+      padding: 0 10%;
+    }
+    
+    #aboutus .story {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10% 0;
+    }
+    
+    #aboutus .story .description span {
+      display: flex;
+      align-items: center;
+      color: #252B42;
+      font-size: 2vw;
+      margin-bottom: 2%;
+      font-weight: bold;
+      font-family: 'lobster', serif;
+    }
+    
+    #aboutus .story .description span div {
+      width: 0.8vw;
+      height: 0.8vw;
+      border-radius: 50%;
+      background-color: #252B42;
+      margin-right: 2%;
+    }
+    #aboutus .story .description p {
+      color: #252B42;
+      font-size: 1.1vw;
+      line-height: 1.8vw;
+    }
+    }
+    /* ....................... */
+.footer{
+  display: flex;
+  justify-content: space-around;
+  padding-left: 3vw;
+  padding-top: 7vw;
+  background-color: #0e173d;
+  color: white;
+  font-size: 1.1vw;
+  margin-top: 2vw;
+  padding-bottom: 5vw;
+}
+
+.media a{
+  text-decoration: none;
+  color: white;
+  padding: 1vw;
+}
+.map{
+  width: 30%;
+}
+iframe{
+  width: 100%;
+  height: 20vw;
+  margin-left: 3vw;
+}
+.footer .iconify{
+  font-size: 1vw;
+}
+#logo img{
+ margin-left: 1vw;
+ 
+}
+#logo{
+  width: 10%;
+}
+.media .iconify{
+  font-size: 1.3vw;
+ 
+}
+.links div{
+  display: flex;
+  
+}
+.links div p{
+  padding: 0.3vw;
+}
+
+@media screen and (max-width: 500px) {
+  .footer{
+      display: flex;
+      flex-direction: column;
+      padding-left: 3vw;
+      padding-top: 7vw;
+      background-color: #0e173d;
+      color: white;
+      font-size: 1.1vw;
+      margin-top: 2vw;
+      padding-bottom: 5vw;
+  }
+  
+  .media a{
+      text-decoration: none;
+      color: white;
+      padding: 1vw;
+      
+  }
+  .map{
+      width: 60%;
+      margin-left: 9vw;
+  }
+  iframe{
+      width: 100%;
+      height: 40vw;
+      margin-left: 5vw;
+      margin-top: 3vw;
+  }
+  .footer .iconify{
+      font-size: 4vw;
+  }
+ #logo{
+     margin-left: 15vw;
+     width: 100%;
+  }
+ #logo img{
+  width: 50%;
+  margin-bottom: 3vw;
+ }
+  .links .iconify{
+      font-size: 2vw;
+      margin-left: -8vw;
+  }
+  .media .iconify{
+      font-size: 2vw;
+      padding: 0%;
+  }
+  .links p{
+      font-size: 3vw;
+      width: 100%;
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+      
+      margin-left: 2vw;
+  }
+  .links{
+      margin-left: 7vw;
+      width: 100%;
+  }
+  .links div{
+      display: flex;
+      
+    }
+    .links div p{
+      padding: 0.3vw;
+    }
+}
+.part1{
+  width: 70%;
+  display: flex;
+
+  
+}
+.member{
+  margin-left: 5vw;
+}
+.div{
+  display: flex;
+ 
+}
+.div p{
+  padding: 0.5vw;
+}
+.members .title p{
+  font-weight: 600;
+}
+.btn{
+  background-color: #fa521c;
+  color: white;
+  margin-bottom: 1vw;
+}
+
+
+
+
+
+.right::-webkit-scrollbar,
+.left::-webkit-scrollbar {
+  display: none;
+}
+
+.example {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.left .title,
+.right .title {
+  display: flex;
+}
+

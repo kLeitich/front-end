@@ -1,0 +1,23 @@
+<!-- ..........navbar..................... -->
+<div class="nav">
+  <div class="logo">
+      <img src="../../assets/images/logo.png" alt="logo">
+  </div>
+  
+  <div class="block" *ngIf="value">
+      <a href="">Home</a>
+      <a href="https://moringaschool.com/about-us/">About us</a>
+      <a routerLink="/project">Projects</a>
+      <a id="log" routerLink="/login" *ngIf="!user">Login</a>
+      <a id="log" routerLink="/my-profile"*ngIf="is_student">Dashboard</a>
+      <a routerLink="/admin-dashboard"*ngIf="is_admin">Dashboard</a>
+      <a  id="nava"  class="nav-link" routerLink="/" (click)="logOut()" *ngIf="user">{{user.username}}Log Out</a> 
+  
+    </div>
+  
+  
+     
+
+  </div>
+  
+
