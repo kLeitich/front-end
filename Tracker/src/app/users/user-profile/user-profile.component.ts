@@ -6,6 +6,7 @@ import {project} from '../../models/project'
 //import { AuthService } from 'src/app/auth/auth.service';
 import { HttpClient } from '@angular/common/http';
 import { AuthenticatedUserService } from 'src/app/authenticated-user.service';
+import { user } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-user-profile',
@@ -22,6 +23,8 @@ export class UserProfileComponent implements OnInit {
   is_admin=false
   a_user!: any;
   is_loggedIn=false
+  user!:user
+  
   image_url='https://res.cloudinary.com/jeddy/'
   constructor(private ServiceService:ServiceService,
     private authentication: AuthenticatedUserService,

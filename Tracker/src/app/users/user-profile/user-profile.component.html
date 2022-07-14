@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <body>
     <div class="container">
         <!--user profile here-->
@@ -7,7 +8,7 @@
                 <div class="col-lg-5 col-md-5 col-sm-12">
                     <div class="text-center mt-3" >
                     <img  class="rounded-circle profile-img" src="{{image_url + profile.image}}" alt="profile-image" width="60%">
-                    <h3 class="mt-4 h-font-semibold" >{{profile.first_name}} {{profile.last_name}}</h3>
+                    <h3 class="mt-4 h-font-semibold" *ngIf="a_user" >{{profile.first_name}} {{profile.last_name}}</h3>
                     <p class="p-description"></p>
     
                     <a routerLink="{{profile.githubLink}}"><i class="fa-brands fa-github-square fa-2x ml-2 github"></i></a>

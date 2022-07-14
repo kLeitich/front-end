@@ -14,12 +14,15 @@
 .block a{
     text-decoration: none;
     color: black;
-    padding: 2vw;
+    padding: 0.3vw;
+    
 }
 .block{
     margin-top: 1vw;
     font-size: 1.2vw;
     margin-left: -9vw;
+    display: flex;
+    flex-direction: row;
 }
 /* ...............................media queries........................ */
 @media screen and (max-width: 450px) {
@@ -43,4 +46,7 @@
         margin-top: 1vw;
         font-size: 2.3vw;
     }
+}
+.nava a{
+    margin-left: -20vw;
 }
