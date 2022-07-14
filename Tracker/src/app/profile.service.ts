@@ -11,7 +11,7 @@ import { profile } from './models/profile';
   providedIn: 'root'
 })
 export class ProfileService {
-  API_URL = `https://backendjw.herokuapp.com/api`
+  API_URL = `http://127.0.0.1:8000/api`
   profile!:profile[]
 
   constructor(private http: HttpClient) { }

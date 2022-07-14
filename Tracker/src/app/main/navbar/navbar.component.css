@@ -9,6 +9,7 @@
 .nav{
     display: flex;
     justify-content: space-around;
+    padding-bottom: 0.4vw;
 }
 .block a{
     text-decoration: none;

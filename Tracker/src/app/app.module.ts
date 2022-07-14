@@ -14,9 +14,15 @@ import { CommonModule } from '@angular/common';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 import { ProjectFormComponent } from './project-form/project-form.component';
+
+import { CohortComponent } from '../app/cohort/cohort.component';
+import { UserComponent } from './user/user.component';
+
 import { DirectiveDirective } from './directive.directive';
 import { DatePipe } from './date.pipe';
 import { AddProjectComponent } from './users/add-project/add-project.component';
+
+
 
 
 @NgModule({
@@ -29,6 +35,12 @@ import { AddProjectComponent } from './users/add-project/add-project.component';
     UserProfileComponent,
     UpdateProfileComponent,
     ProjectFormComponent,
+
+    ProjectComponent,
+    AdminDashboardComponent,
+    CohortComponent,
+    UserComponent,
+
     DirectiveDirective,
     AdminDashboardComponent ,
     DatePipe,

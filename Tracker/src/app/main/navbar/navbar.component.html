@@ -1,14 +1,23 @@
 <!-- ..........navbar..................... -->
 <div class="nav">
   <div class="logo">
-      <img src="../../assets/logo.png" alt="logo">
+      <img src="../../assets/images/logo.png" alt="logo">
   </div>
-  <div class="block">
+  
+  <div class="block" *ngIf="value">
       <a href="">Home</a>
       <a href="https://moringaschool.com/about-us/">About us</a>
-      <a href="">Projects</a>
-      <a id="log" routerLink="/login">Login</a>
+      <a routerLink="/project">Projects</a>
+      <a id="log" routerLink="/login" *ngIf="!user">Login</a>
+      <a id="log" routerLink="/my-profile"*ngIf="is_student">Dashboard</a>
+      <a routerLink="/admin-dashboard"*ngIf="is_admin">Dashboard</a>
+      <a class="nav-link" routerLink="/" (click)="logOut()" *ngIf="user">Log Out</a> 
+  
+    </div>
+  
+  
+     
 
   </div>
   
-</div>
+

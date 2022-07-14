@@ -9,6 +9,7 @@ import { UpdateProfileComponent } from './users/update-profile/update-profile.co
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
 import { AddProjectComponent } from  './users/add-project/add-project.component';
 
+
 const routes: Routes = [
   {path:'', component:HomepageComponent},
   {path:'project', component:ProjectComponent},
