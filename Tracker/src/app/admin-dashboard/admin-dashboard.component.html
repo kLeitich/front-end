@@ -11,12 +11,14 @@
 <aside class="main-sidebar sidebar-light-primary elevation-4" style="background-color:#111F3C ;">
 <div class="sidebar">
 
-<div class="user-panel mt-3 pb-3 mb-3 d-flex"  *ngFor="let user of user">
-<div class="image">
-<img src="assets/images/naomi (1).jpg" class="img-circle elevation-2" alt="User Image">
-</div>
+<div class="user-panel mt-3 pb-3 mb-3 d-flex"  >
+
 <div class="info">
-<a href="#" class="d-block text-white">Naomi Glow</a>
+<a href="#" class="d-block text-white" *ngIf="a_user" >{{a_user.username}}</a>
+</div>
+<div class="image" >
+    <span class="iconify" data-icon="healthicons:ui-user-profile-negative" style="color: white;"></span>
+    <!-- <img  src="{{image_url+profile.image}}" class="img-circle elevation-2" alt="User Image"> -->
 </div>
 </div>
 
@@ -141,10 +143,10 @@ Manage Projects
 <div class="info-box">
 <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 <div class="info-box-content">
-<span class="info-box-text">Langauges</span>
+<span class="info-box-text">Cohort</span>
 <span class="info-box-number">
-10
-<small>%</small>
+{{cohort.length}}
+
 </span>
 </div>
 
@@ -157,7 +159,7 @@ Manage Projects
 <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 <div class="info-box-content">
 <span class="info-box-text">Students</span>
-<span class="info-box-number">41,410</span>
+<span class="info-box-number" >{{profile.length}}</span>
 </div>
 
 </div>
@@ -170,25 +172,14 @@ Manage Projects
 <div class="info-box mb-3">
 <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
 <div class="info-box-content">
-<span class="info-box-text">Techinical Mentors</span>
-<span class="info-box-number">760</span>
+<span class="info-box-text">Projects</span>
+<span class="info-box-number">{{project.length}}</span>
 </div>
 
 </div>
 
 </div>
 
-<div class="col">
-<div class="info-box mb-3">
-<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
-<div class="info-box-content">
-<span class="info-box-text">Alumini</span>
-<span class="info-box-number">2,000</span>
-</div>
-
-</div>
-
-</div>
 
 </div>
 
@@ -204,43 +195,7 @@ Manage Projects
 
 <div class="col-12">
 
-<div class="card">
-<div class="card-header">
-<h3 class="card-title">Latest Members</h3>
-<div class="card-tools">
-<span class="badge badge-danger"> New Members</span>
-<button type="button" class="btn btn-tool" data-card-widget="collapse">
-<i class="fas fa-minus"></i>
-</button>
-<button type="button" class="btn btn-tool" data-card-widget="remove">
-<i class="fas fa-times"></i>
-</button>
-</div>
-</div>
 
-<div class="card-body p-0">
-<ul class="users-list clearfix">
-<li *ngFor="let user of user">
-    <div class="row">
-        <div class="col">
-            <a class="users-list-name" href="#">{{user.username}}</a>
-        </div>
-        <div class="col">
-            <span class="users-list-date">{{user.email}}</span>
-        </div>
-    </div>
-
-
-</li>
-</ul>
-
-</div>
-
-<div class="card-footer text-center">
-<a href="javascript:">View All Users</a>
-</div>
-
-</div>
 
 </div>
 
@@ -263,8 +218,8 @@ Manage Projects
                         
                     <h4 class="text-center h-font-semibold">ADD A STUDENT</h4>
                     <div class="form-outline mb-4">
-                        <label class="form-label" for="name"> name</label>
-                        <input type="text"#name name="name" id="name" class="form-control form-control-lg" />                    
+                        <label class="form-label" for="k"> name</label>
+                        <input type="text"#k name="k"  class="form-control form-control-lg" />                    
                     </div>
     
                     <div class="form-outline mb-4">
@@ -346,6 +301,8 @@ Manage Projects
             </div>
         </div>
     </th>
+    
+
     </tr>
 
     
@@ -373,20 +330,28 @@ Manage Projects
           </button>
         </div>
         <div class="modal-body">
-            <form >
+            <form (submit)="submitproject(k.value,name.value,description.value,member.value,project_image.value,url.value,date_posted.value)">
         
                     
                 <h4 class="text-center h-font-semibold">ADD A PROJECT</h4>
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="0name"> Project Owner</label>
-                    <input type="text"#oname name="oname" id="oname" class="form-control form-control-lg" />                    
+                    <label class="form-label" for="user"> Project Owner</label>
+                    <input type="text"#k name="user" id="user" class="form-control form-control-lg" />                    
                 </div>
 
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="username"> Project Name</label>
-                  <input type="text"#pname name="pname" id="pname" class="form-control form-control-lg" />                    
+                  <label class="form-label" for="name"> Project Name</label>
+                  <input type="text"#name name="name" id="name" class="form-control form-control-lg" />                    
               </div>
               <div class="form-outline mb-4">
+                <label for="member">Members</label>
+                    <select id="member" name="member"#member size="4" multiple>
+                    <option *ngFor="let user of user" value="{{ user.username }}">{{ user.username}}</option>
+                    </select>
+                <!-- <label class="form-label" for="member">Member</label>
+                <input type="textarea"#member name="member" id="member" class="form-control form-control-lg" />                     -->
+            </div>
+            <div class="form-outline mb-4">
                 <label class="form-label" for="description"> Description</label>
                 <input type="textarea"#description name="description" id="description" class="form-control form-control-lg" />                    
             </div>
