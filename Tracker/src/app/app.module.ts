@@ -20,6 +20,7 @@ import { UserComponent } from './user/user.component';
 
 import { DirectiveDirective } from './directive.directive';
 import { DatePipe } from './date.pipe';
+import { AddProjectComponent } from './users/add-project/add-project.component';
 
 
 
@@ -41,9 +42,9 @@ import { DatePipe } from './date.pipe';
     UserComponent,
 
     DirectiveDirective,
+    AdminDashboardComponent ,
     DatePipe,
- 
-
+    AddProjectComponent
   
 
   ],
